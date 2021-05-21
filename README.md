@@ -67,6 +67,43 @@ Core folder:
 
 >Code will be put in the core folder if create a new feature, a new module doesn't make change to that code
 
+## Contribute guides
+### Commit
+
+Format: `<emoji> <commit-message> <fileName (if possible)>`|`
+
+See guide at: https://gitmoji.dev/
+
+|   Commit type              | Emoji                                         |
+|:---------------------------|:----------------------------------------------|
+| Initial commit             | 🎉 `:tada:`                                  |
+| Deploying stuff            | 🚀 `:rocket:`                                |
+| New feature                | ✨ `:sparkles:`                              |
+| Bugfix                     | 🐛 `:bug:`                                   |
+| Refactor or modifying      | 🔨 `:hammer:`                                |
+| Documentation, add README  | 📚 `:books:`                                 |
+| Commenting stuff           | 📝 `:pencil:`                                |
+| Styling                    | 🎨 `:art:`                                   |
+| Hotfix                     | 🔥 `:fire:`                                   |
+
+### Branch
+
+- `master`
+- `dev`
+- `staging`
+- `feature/*`
+- `bugfix/*`
+- `hotfix/*`
+
+- Checkout `dev`, `prod` and  `feature/*` from master
+- Checkout `hotfix` from `master` for production bug fixing
+- Checkout `bugfix` from `feature/*` for feature bug fixing
+### Pull request guide
+
+- Merge `feature/*` into `dev` for development
+- Merge `dev` into `staging` for demo and testing
+- Merge `staging` into `master` for final production
+
 
 ### Customize configuration
 
