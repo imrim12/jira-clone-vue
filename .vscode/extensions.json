@@ -22,9 +22,28 @@
     // https://github.com/DavidAnson/vscode-markdownlint
     "DavidAnson.vscode-markdownlint",
 
+    // JavaScript (ES6) code snippets
+    // https://github.com/xabikos/vscode-javascript
+    "xabikos.javascriptsnippets",
+
     // SCSS intellisense
     // https://github.com/mrmlnc/vscode-scss
     "mrmlnc.vscode-scss",
 
+    // Tailwind intellisense
+    // https://github.com/tailwindlabs/tailwindcss-intellisense
+    "bradlc.vscode-tailwindcss",
+
+    // Git Graph
+    // https://github.com/mhutchie/vscode-git-graph
+    "mhutchie.git-graph",
+
+    // Git History
+    // https://github.com/DonJayamanne/gitHistoryVSCode
+    "donjayamanne.githistory",
+
+    // GitLens
+    // https://github.com/eamodio/vscode-gitlens
+    "donjayamanne.githistory",
   ]
 }

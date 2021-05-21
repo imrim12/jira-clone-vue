@@ -10,17 +10,18 @@ const aliases = {
   '@locales': 'src/locales',
   '@pages': 'src/pages',
   '@router': 'src/router',
-  '@styles': 'src/styles',
   '@store': 'src/store',
   '@use': 'src/use',
   // Core access
+  '@apis': 'src/core/apis',
   '@theme': 'src/core/components/theme',
   '@constants': 'src/core/constants',
   '@layouts': 'src/core/layouts',
   '@middleware': 'src/core/middleware',
   '@mixins': 'src/core/mixins',
+  '@models': 'src/core/models',
   '@plugins': 'src/core/plugins',
-  '@apis': 'src/core/apis',
+  '@styles': 'src/core/styles',
   '@utils': 'src/core/utils',
 }
 

@@ -48,14 +48,6 @@
         "src/router/index.scss",
         "src/router/index.css"
       ],
-      "@styles/*": ["src/styles/*"],
-      "@styles": [
-        "src/styles/index.js",
-        "src/styles/index.json",
-        "src/styles/index.vue",
-        "src/styles/index.scss",
-        "src/styles/index.css"
-      ],
       "@store/*": ["src/store/*"],
       "@store": [
         "src/store/index.js",
@@ -71,6 +63,14 @@
         "src/use/index.vue",
         "src/use/index.scss",
         "src/use/index.css"
+      ],
+      "@apis/*": ["src/core/apis/*"],
+      "@apis": [
+        "src/core/apis/index.js",
+        "src/core/apis/index.json",
+        "src/core/apis/index.vue",
+        "src/core/apis/index.scss",
+        "src/core/apis/index.css"
       ],
       "@theme/*": ["src/core/components/theme/*"],
       "@theme": [
@@ -112,6 +112,14 @@
         "src/core/mixins/index.scss",
         "src/core/mixins/index.css"
       ],
+      "@models/*": ["src/core/models/*"],
+      "@models": [
+        "src/core/models/index.js",
+        "src/core/models/index.json",
+        "src/core/models/index.vue",
+        "src/core/models/index.scss",
+        "src/core/models/index.css"
+      ],
       "@plugins/*": ["src/core/plugins/*"],
       "@plugins": [
         "src/core/plugins/index.js",
@@ -120,13 +128,13 @@
         "src/core/plugins/index.scss",
         "src/core/plugins/index.css"
       ],
-      "@apis/*": ["src/core/apis/*"],
-      "@apis": [
-        "src/core/apis/index.js",
-        "src/core/apis/index.json",
-        "src/core/apis/index.vue",
-        "src/core/apis/index.scss",
-        "src/core/apis/index.css"
+      "@styles/*": ["src/core/styles/*"],
+      "@styles": [
+        "src/core/styles/index.js",
+        "src/core/styles/index.json",
+        "src/core/styles/index.vue",
+        "src/core/styles/index.scss",
+        "src/core/styles/index.css"
       ],
       "@utils/*": ["src/core/utils/*"],
       "@utils": [
