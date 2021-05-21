@@ -1,6 +1,6 @@
 <template>
   <div class="default__layout">
-    <Navbar />
+    <MyNavbar />
     <div>
       <router-link class="text-primary hover:underline" to="/">
         Home
@@ -14,11 +14,11 @@
 </template>
 
 <script>
-import { Navbar } from '@/core/components/layout'
+import { MyNavbar } from '@/core/components/layout'
 export default {
   name: 'DefaultLayout',
   components: {
-    Navbar,
+    MyNavbar,
   },
 }
 </script>

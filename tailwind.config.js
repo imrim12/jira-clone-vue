@@ -24,7 +24,7 @@ module.exports = {
     preserveHtmlElements: false,
     content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx,css,scss}'],
     options: {
-      // safeList: [/^el-/] // For element UI CSS classes
+      // safeList: [/^el-/] // For element UI CSS classes if use
     },
   },
 }

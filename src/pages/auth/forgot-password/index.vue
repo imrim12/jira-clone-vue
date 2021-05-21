@@ -1,3 +1,3 @@
 <template>
-  <div class="forgotPasswordPageComponent"></div>
+  <div class="forgot-password-page"></div>
 </template>

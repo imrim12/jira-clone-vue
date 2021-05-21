@@ -20,6 +20,7 @@ import { utils } from '@utils'
 import App from '@/App.vue'
 import '@/core/styles/css/main.css'
 import '@/core/styles/scss/main.scss'
+import dev from './core/utils/functions/dev'
 
 Vue.mixin(globalMixin)
 
@@ -27,6 +28,25 @@ Vue.use(clientApi)
 Vue.use(authApi)
 Vue.use(eventBus)
 Vue.use(utils)
+
+Vue.config.errorHandler = (err, vm, info) => {
+  // handle error
+  // `info` is a Vue-specific error info, e.g. which lifecycle hook
+  // the error was found in. Only available in 2.2.0+
+  dev.error(err, vm, info)
+  router.push({
+    path: '/error',
+    query: {
+      statusCode: err.statusCode || 500,
+      message: err.message || 'Something is wrong',
+    },
+  })
+}
+
+Vue.config.warnHandler = (msg, vm, trace) => {
+  // `trace` is the component hierarchy trace
+  dev.warn(msg, vm, trace)
+}
 
 new Vue({
   store,

@@ -1,3 +1,3 @@
 <template>
-  <div class="signinPageComponent"></div>
+  <div class="signin-page"></div>
 </template>

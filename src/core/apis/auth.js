@@ -16,12 +16,13 @@ export const authApi = axios.create({
 authApi.interceptors.request.use(
   (config) => {
     config.headers.Authorization = 'Bearer ' + store?.state?.auth?.data?.token
-    dev.log('DevOnly | Authenticated API executed')
+    dev.log('[Dev only] Authenticated API executed')
     // Must return config
     return config
   },
   (error) => {
     // Do something with request error
+    dev.log('[Dev only]', error.response.data)
     return Promise.reject(error)
   }
 )

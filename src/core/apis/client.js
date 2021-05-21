@@ -15,7 +15,7 @@ export const clientApi = axios.create({
 // Add a request interceptor
 clientApi.interceptors.request.use(
   (config) => {
-    dev.log('DevOnly | Client API executed')
+    dev.log('[Dev only] Client API executed')
     // Must return config
     return config
   },
@@ -35,6 +35,7 @@ clientApi.interceptors.response.use(
   (error) => {
     // Any status codes that falls outside the range of 2xx cause this function to trigger
     // Do something with response error
+    dev.log('[Dev only]', error.response.data)
     return Promise.reject(error)
   }
 )

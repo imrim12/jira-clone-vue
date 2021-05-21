@@ -1,5 +1,5 @@
 <template>
-  <div class="signupPageComponent">
+  <div class="signup-page">
     Signup page
   </div>
 </template>
