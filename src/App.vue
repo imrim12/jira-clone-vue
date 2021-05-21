@@ -1,62 +1,79 @@
 <template>
-  <component
-    :is="layout"
-    :class="{
-      dark: isDarkMode,
-    }"
-  >
-    <router-view @layout="updateLayout" />
-  </component>
+  <div v-cloak>
+    <component
+      :is="layout"
+      :class="{
+        dark: isDarkMode,
+      }"
+    >
+      <router-view />
+    </component>
+    <transition name="fade" mode="out-in">
+      <MyLoading v-if="isLoading" />
+    </transition>
+  </div>
 </template>
 
 <script>
-// Import layout components here
-import defaultLayout from '@layouts/default.vue'
-import blankLayout from '@layouts/blank.vue'
-// Auth
-import unauthLayout from '@layouts/auth/unauth.vue'
-import authLayout from '@layouts/auth/index.vue'
-// Error
-import errorLayout from '@layouts/error/index.vue'
-// Responsive
-import mobileLayout from '@layouts/responsive/mobile.vue'
-
-import { camelCase } from 'lodash'
+import { defineComponent } from '@vue/composition-api'
+import {
+  LayoutDefault,
+  LayoutAuth,
+  LayoutUnauth,
+  LayoutError,
+  LayoutMobile,
+} from '@layouts'
+// Loading component
+import { MyLoading } from '@/core/components/layout'
+import { camelCase, startCase } from 'lodash'
 // App component
-export default {
+export default defineComponent({
   name: 'App',
   components: {
-    defaultLayout,
-    blankLayout,
-    unauthLayout,
-    authLayout,
-    errorLayout,
-    mobileLayout,
+    LayoutDefault,
+    LayoutAuth,
+    LayoutUnauth,
+    LayoutError,
+    LayoutMobile,
+    MyLoading,
+  },
+  provide() {
+    return {
+      loading: {
+        on: () => {
+          this.isLoading = true
+        },
+        off: () => {
+          this.isLoading = false
+        },
+      },
+    }
   },
   data() {
     return {
-      layout: 'defaultLayout',
       isDarkMode: false,
+      isLoading: false,
     }
   },
-  methods: {
-    updateLayout(layout) {
-      this.layout = layout
+  computed: {
+    layout() {
+      return this.$route.meta.layout
+        ? startCase(camelCase('Layout_' + this.$route.meta.layout)).replace(
+            / /g,
+            ''
+          )
+        : 'LayoutDefault'
     },
+  },
+  methods: {
     toggleDarkMode() {
       this.isDarkMode = this.isDarkMode ? false : true
     },
   },
   created() {
-    // Use busEvent to trigger these listeners
     this.$bus.$on('toggleDarkMode', () => {
       this.toggleDarkMode()
     })
-
-    this.$bus.$on('layout', (layout) => {
-      // For example: $bus.$emit('layout', 'unauth') will trigger 'unauthLayout'
-      this.updateLayout(camelCase(layout + '_layout'))
-    })
   },
-}
+})
 </script>

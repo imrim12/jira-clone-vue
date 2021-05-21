@@ -1,17 +1,12 @@
 <template>
   <div class="dashboard-page">
-    <h1>This is an dashboard page</h1>
-    <button v-wave>
-      Hehehe
-    </button>
+    <h1>This is the project settings page</h1>
+    <router-view></router-view>
   </div>
 </template>
 <script>
 import { defineComponent } from '@vue/composition-api'
 export default defineComponent({
-  name: 'DashboardPage',
-  mounted() {
-    console.log(this.$router)
-  },
+  name: 'ProjectSettingsPage',
 })
 </script>

@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name: 'ErrorPage',
+  name: 'ErrorLayout',
 }
 </script>
 <style lang="scss" scoped>

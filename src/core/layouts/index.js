@@ -1,0 +1,6 @@
+export { default as LayoutAuth } from './auth/index.vue'
+export { default as LayoutUnauth } from './auth/unauth.vue'
+export { default as LayoutError } from './error/index.vue'
+export { default as LayoutMobile } from './responsive/mobile.vue'
+export { default as LayoutDefault } from './default.vue'
+export { default as LayoutBlank } from './blank.vue'
