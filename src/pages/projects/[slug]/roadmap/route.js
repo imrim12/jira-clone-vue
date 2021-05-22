@@ -5,6 +5,7 @@ export default new Route({
   path: '/projects/:slug/roadmap',
   component: () => import('./index.vue'),
   meta: {
+    title: 'projects-roadmap.title',
     auth: false,
     permissions: ['ALL'],
   },

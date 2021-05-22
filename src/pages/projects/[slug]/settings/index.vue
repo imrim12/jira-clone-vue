@@ -8,5 +8,11 @@
 import { defineComponent } from '@vue/composition-api'
 export default defineComponent({
   name: 'ProjectSettingsPage',
+  metaInfo() {
+    return {
+      title: this.$route.params.slug,
+      titleTemplate: this.$t(this.$route.meta.title) + ' | %s',
+    }
+  },
 })
 </script>

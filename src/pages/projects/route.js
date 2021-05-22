@@ -7,6 +7,7 @@ export default new Route({
   path: '/projects',
   component: () => import('./index.vue'),
   meta: {
+    title: 'projects.title',
     auth: false,
     permissions: ['ALL'],
   },

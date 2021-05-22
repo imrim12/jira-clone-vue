@@ -5,6 +5,7 @@ export default new Route({
   path: '/projects/:slug/backlog',
   component: () => import('./index.vue'),
   meta: {
+    title: 'projects-backlog.title',
     auth: false,
     permissions: ['ALL'],
   },

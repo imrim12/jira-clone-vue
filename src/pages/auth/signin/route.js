@@ -5,6 +5,7 @@ export default new Route({
   path: '/auth/signin',
   component: () => import('./index.vue'),
   meta: {
+    title: 'signin.title',
     authNotRequired: true,
   },
 })

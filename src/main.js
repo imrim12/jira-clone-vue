@@ -1,12 +1,18 @@
 import Vue from 'vue'
-import router from './router'
-import { store } from '@store'
 import VueCompositionAPI from '@vue/composition-api'
+import VueMeta from 'vue-meta'
 
 Vue.use(VueCompositionAPI)
+Vue.use(VueMeta, {
+  // optional pluginOptions
+  refreshOnceOnNavigation: true,
+})
 
 Vue.config.productionTip = false
+
 // Plugins
+import router from './router'
+import { store } from '@store'
 import { i18nPlugin } from '@plugins/i18n'
 import { eventBus } from '@plugins/bus'
 // Axios instances

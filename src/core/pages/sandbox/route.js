@@ -5,6 +5,7 @@ export default new Route({
   path: '/sandbox',
   component: () => import('./index.vue'),
   meta: {
+    title: 'sandbox.title',
     auth: false,
   },
 })

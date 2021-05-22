@@ -5,6 +5,7 @@ export default new Route({
   path: '/projects/:slug/board',
   component: () => import('./index.vue'),
   meta: {
+    title: 'projects-board.title',
     auth: false,
     permissions: ['ALL'],
   },

@@ -10,8 +10,10 @@ import { Route } from '@/core/models/Route'
 export default new Route({
   name: 'projects-slug',
   path: '/projects/:slug',
+  redirect: '/projects/:slug/board',
   component: () => import('./index.vue'),
   meta: {
+    title: 'projects.title',
     auth: false,
     permissions: ['ALL'],
   },

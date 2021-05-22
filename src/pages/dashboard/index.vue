@@ -10,8 +10,10 @@
 import { defineComponent } from '@vue/composition-api'
 export default defineComponent({
   name: 'DashboardPage',
-  mounted() {
-    console.log(this.$router)
+  metaInfo() {
+    return {
+      titleTemplate: this.$t(this.$route.meta.title) + ' | %s',
+    }
   },
 })
 </script>

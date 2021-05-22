@@ -5,6 +5,7 @@ export default new Route({
   path: '/projects/:slug/settings',
   component: () => import('./index.vue'),
   meta: {
+    title: 'projects-settings.title',
     auth: false,
     permissions: ['ALL'],
   },

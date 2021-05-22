@@ -5,6 +5,7 @@ export default new Route({
   path: '/auth/forgot-password',
   component: () => import('./index.vue'),
   meta: {
+    title: 'forgot-password.title',
     authNotRequired: true,
   },
 })

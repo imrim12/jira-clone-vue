@@ -5,6 +5,7 @@ export default new Route({
   path: '/:pathMatch(.*)*',
   component: () => import('./index.vue'),
   meta: {
+    title: 'error.404',
     layout: 'error',
     auth: false,
   },

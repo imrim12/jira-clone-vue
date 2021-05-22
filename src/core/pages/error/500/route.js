@@ -5,6 +5,7 @@ export default new Route({
   path: '/error',
   component: () => import('./index.vue'),
   meta: {
+    title: 'error.500',
     layout: 'error',
     auth: false,
   },

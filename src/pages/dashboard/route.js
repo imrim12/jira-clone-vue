@@ -6,15 +6,8 @@ export default new Route({
   component: () => import('./index.vue'),
   alias: ['/dashboard', '/home'],
   meta: {
+    title: 'dashboard.title',
     auth: false,
     permissions: ['ALL'],
-  },
-  options: {
-    // hidden: true, // For sidebar
-    label: 'Dashboard', // If left empty, it will take the title
-    icon: {
-      type: 'fa',
-      class: 'fas fa-tachometer-alt',
-    },
   },
 })
