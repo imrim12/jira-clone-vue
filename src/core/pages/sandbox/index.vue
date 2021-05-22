@@ -1,5 +1,5 @@
 <template>
-  <div class="sandboxPageComponent"></div>
+  <div class="sandboxPageComponent"> </div>
 </template>
 <script>
 export default {

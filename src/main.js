@@ -10,6 +10,9 @@ Vue.use(VueMeta, {
 
 Vue.config.productionTip = false
 
+import '@/core/styles/css/main.css'
+import '@/core/styles/scss/main.scss'
+
 // Plugins
 import router from './router'
 import { store } from '@store'
@@ -22,11 +25,10 @@ import authApi from '@/core/apis/auth'
 import { globalMixin } from '@mixins/global'
 //
 import { utils } from '@utils'
-// Vuex constants
 import App from '@/App.vue'
-import '@/core/styles/css/main.css'
-import '@/core/styles/scss/main.scss'
 import dev from './core/utils/functions/dev'
+
+import MyThemeComponents from '@theme'
 
 Vue.mixin(globalMixin)
 
@@ -34,6 +36,7 @@ Vue.use(clientApi)
 Vue.use(authApi)
 Vue.use(eventBus)
 Vue.use(utils)
+Vue.use(MyThemeComponents)
 
 Vue.config.errorHandler = (err, vm, info) => {
   // handle error
