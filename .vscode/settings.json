@@ -29,6 +29,7 @@
       "decorators": "typescript",
       "mixins": "vue",
       "use": "mappings",
+      "stories": "theme",
   },
 
   // ===
