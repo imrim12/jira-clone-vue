@@ -1,5 +1,11 @@
-<template>
-  <button class="my-button">
+<template functional>
+  <button
+    class="my-button"
+    :class="[
+      props.type ? `my-button--${props.type}` : '',
+      props.size ? `my-button--${props.size}` : '',
+    ]"
+  >
     <slot />
   </button>
 </template>
@@ -9,15 +15,17 @@ import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
   name: 'MyButton',
-  props: {},
-  setup() {
-    //
+  props: {
+    type: {
+      validator(value) {
+        return ['primary', 'light'].includes(value)
+      },
+    },
+    size: {
+      validator(value) {
+        return ['large', 'normal', 'small', 'mini'].includes(value)
+      },
+    },
   },
 })
 </script>
-
-<style lang="scss">
-.my-button {
-  //
-}
-</style>
