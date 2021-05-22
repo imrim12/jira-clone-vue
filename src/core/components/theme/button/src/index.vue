@@ -23,7 +23,7 @@ export default defineComponent({
     },
     size: {
       validator(value) {
-        return ['large', 'normal', 'small', 'mini'].includes(value)
+        return ['large', 'medium', 'small', 'mini'].includes(value)
       },
     },
   },

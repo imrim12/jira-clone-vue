@@ -1,9 +1,9 @@
 <template>
-  <span class="my-popover-wrapper">
-    <span class="my-popover-target" ref="handler">
+  <span class="my-tooltip-wrapper">
+    <span class="my-tooltip-target" ref="handler">
       <slot />
     </span>
-    <div class="my-popover-inner" ref="container">
+    <div class="my-tooltip-inner" ref="container">
       <slot name="body">
         {{ title }}
       </slot>
@@ -11,11 +11,11 @@
   </span>
 </template>
 <script>
-// src\core\components\theme\popover\src\index.vue
+// src\core\components\theme\tooltip\src\index.vue
 import { MyTippy } from '@/core/components/plugins'
 
 export default {
   ...MyTippy,
-  name: 'MyPopover',
+  name: 'MyTooltip',
 }
 </script>

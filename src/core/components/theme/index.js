@@ -10,6 +10,7 @@ import { MyInput } from './input'
 import { MyModal } from './modal'
 import { MyPopover } from './popover'
 import { MyTableSimple } from './table-simple'
+import { MyTooltip } from './tooltip'
 
 const components = [
   MyAvatar,
@@ -24,6 +25,7 @@ const components = [
   MyModal,
   MyPopover,
   MyTableSimple,
+  MyTooltip,
 ]
 
 // Use in main.js with Vue.use to register all components globally
@@ -31,6 +33,7 @@ export default {
   install(app) {
     components.forEach((component) => {
       app.component(component.name, component)
+      console.log(component.name, component)
     })
   },
 }
@@ -49,4 +52,5 @@ export {
   MyModal,
   MyPopover,
   MyTableSimple,
+  MyTooltip,
 }

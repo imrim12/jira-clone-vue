@@ -6,6 +6,7 @@
   border-radius: 3px;
   box-shadow: none !important;
   outline: none !important;
+  font-weight: 500;
 
   background-color: $--color-gray-100;
   color: $--color-gray-800;
@@ -16,33 +17,33 @@
     background-color: $--color-gray-300;
   }
 
-  &.my-button--large {
+  &--large {
     padding: 0 18px;
     line-height: 48px;
     border-radius: 4px;
   }
 
-  &.my-button--medium {
+  &--medium {
     padding: 0 10px;
     line-height: 32px;
     border-radius: 3px;
   }
 
-  &.my-button--small {
+  &--small {
     padding: 0 8px;
     line-height: 24px;
     font-size: 0.9rem;
     border-radius: 3px;
   }
 
-  &.my-button--mini {
+  &--mini {
     padding: 0 8px;
     line-height: 20px;
     font-size: 0.8rem;
     border-radius: 2px;
   }
 
-  &.my-button--primary {
+  &--primary {
     background-color: $--color-primary;
     color: $--color-white;
     &:hover {
@@ -53,7 +54,7 @@
     }
   }
 
-  &.my-button--light {
+  &--light {
     background-color: $--color-gray-100;
     color: $--color-gray-800;
     &:hover {
@@ -64,5 +65,59 @@
     }
   }
 
+  &--success {
+    background-color: $--color-success;
+    color: $--color-white;
+    &:hover {
+      background-color: $--color-success-600;
+    }
+    &:active {
+      background-color: $--color-success-700;
+    }
+  }
+
+  &--danger {
+    background-color: $--color-danger;
+    color: $--color-white;
+    &:hover {
+      background-color: $--color-danger-600;
+    }
+    &:active {
+      background-color: $--color-danger-700;
+    }
+  }
+
+  &--warning {
+    background-color: $--color-warning;
+    color: $--color-gray-600;
+    &:hover {
+      background-color: $--color-warning-600;
+    }
+    &:active {
+      background-color: $--color-warning-700;
+    }
+  }
+
+  &--info {
+    background-color: $--color-info;
+    color: $--color-white;
+    &:hover {
+      background-color: $--color-info-600;
+    }
+    &:active {
+      background-color: $--color-info-700;
+    }
+  }
+
+  &--gray {
+    background-color: $--color-gray;
+    color: $--color-white;
+    &:hover {
+      background-color: $--color-gray-600;
+    }
+    &:active {
+      background-color: $--color-gray-700;
+    }
+  }
 
 }
