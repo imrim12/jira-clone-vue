@@ -57,9 +57,11 @@ Vue.config.warnHandler = (msg, vm, trace) => {
   dev.warn(msg, vm, trace)
 }
 
-new Vue({
+const app = new Vue({
   store,
   router,
   i18n: i18nPlugin,
   render: (h) => h(App),
 }).$mount('#app')
+
+export { app }

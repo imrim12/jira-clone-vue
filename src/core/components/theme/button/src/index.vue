@@ -5,6 +5,7 @@
       props.type ? `my-button--${props.type}` : '',
       props.size ? `my-button--${props.size}` : '',
     ]"
+    v-wave
   >
     <slot />
   </button>
