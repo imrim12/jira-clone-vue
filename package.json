@@ -7,8 +7,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -p 23456",
+    "storybook:build": "build-storybook -o docs && echo jira.nguyenhuunguyeny.com > docs/CNAME"
   },
   "dependencies": {
     "@vue/composition-api": "^1.0.0-rc.5",

@@ -3,9 +3,7 @@
       "scope": "javascript",
       "prefix": "scf storybook",
       "body": [
-          "import My${1} from '../core/components/theme${2}'",
-          "import '../core/styles/css/main.css'",
-          "import '../core/styles/scss/main.scss'",
+          "import My${1} from '@/core/components/theme${2}'",
           "",
           "export default {",
           "  title: 'UI Components/My${1}',",

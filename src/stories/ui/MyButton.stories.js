@@ -30,30 +30,44 @@ const storyConfig = {
 
 export default storyConfig
 
-const Template = (args, { argTypes }) => ({
+export const tryAllOptions = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { MyButton },
   template: `<my-button v-bind="$props">My cool button</my-button>`,
 })
 
-export const Primary = Template.bind({})
-Primary.args = {
-  type: 'primary',
-}
+export const types = () => ({
+  components: { MyButton },
+  template: `
+    <div class="text-center">
+      <my-button type="primary">My cool primary button</my-button>
+      <div class="my-3" />
+      <my-button type="light">My cool light button</my-button>
+      <div class="my-3" />
+      <my-button type="success">My cool success button</my-button>
+      <div class="my-3" />
+      <my-button type="danger">My cool danger button</my-button>
+      <div class="my-3" />
+      <my-button type="warning">My cool warning button</my-button>
+      <div class="my-3" />
+      <my-button type="info">My cool info button</my-button>
+      <div class="my-3" />
+      <my-button type="gray">My cool gray button</my-button>
+    </div>
+  `,
+})
 
-export const Light = Template.bind({})
-Light.args = {
-  type: 'light',
-}
-
-export const Small = Template.bind({})
-Small.args = {
-  type: 'primary',
-  size: 'small',
-}
-
-export const Large = Template.bind({})
-Large.args = {
-  type: 'primary',
-  size: 'large',
-}
+export const sizes = () => ({
+  components: { MyButton },
+  template: `
+    <div class="text-center">
+      <my-button type="primary" size="large">My cool large button</my-button>
+      <div class="my-3" />
+      <my-button type="primary" size="medium">My cool medium button</my-button>
+      <div class="my-3" />
+      <my-button type="primary" size="small">My cool small button</my-button>
+      <div class="my-3" />
+      <my-button type="primary" size="mini">My cool mini button</my-button>
+    </div>
+  `,
+})
