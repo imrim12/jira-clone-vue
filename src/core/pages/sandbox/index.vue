@@ -1,8 +1,6 @@
 <template>
   <div class="sandboxPageComponent">
-    <my-button-icon type="primary" size="large" icon="arrow-up">
-      Heehehehe
-    </my-button-icon>
+    <my-button type="primary" size="large" round>OK</my-button>
     <MyIcon icon="bell" />
   </div>
 </template>

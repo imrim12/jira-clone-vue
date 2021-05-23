@@ -36,6 +36,16 @@ const storyConfig = {
         type: 'boolean',
       },
     },
+    square: {
+      control: {
+        type: 'boolean',
+      },
+    },
+    round: {
+      control: {
+        type: 'boolean',
+      },
+    },
     icon: {
       control: false,
     },

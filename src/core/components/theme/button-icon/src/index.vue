@@ -4,6 +4,8 @@
     :class="[
       props.type ? `my-button--${props.type}` : '',
       props.size ? `my-button--${props.size}` : '',
+      props.square ? 'my-button--square' : '',
+      props.round ? 'my-button--square rounded-full' : '',
     ]"
     v-wave
   >
@@ -11,7 +13,7 @@
       v-if="!props.postfix"
       :icon="props.icon"
       :style="{
-        marginRight: `${props.gap * 0.25}rem`,
+        marginRight: `${slots.default ? props.gap * 0.25 : 0}rem`,
       }"
     />
     <slot />
@@ -19,7 +21,7 @@
       v-if="props.postfix"
       :icon="props.icon"
       :style="{
-        marginLeft: `${props.gap * 0.25}rem`,
+        marginLeft: `${slots.default ? props.gap * 0.25 : 0}rem`,
       }"
     />
   </button>
@@ -48,6 +50,14 @@ export default defineComponent({
       default: 2,
     },
     postfix: {
+      type: Boolean,
+      default: false,
+    },
+    square: {
+      type: Boolean,
+      default: false,
+    },
+    round: {
       type: Boolean,
       default: false,
     },

@@ -25,6 +25,16 @@ const storyConfig = {
         options: ['large', 'medium', 'small', 'mini'],
       },
     },
+    square: {
+      control: {
+        type: 'boolean',
+      },
+    },
+    round: {
+      control: {
+        type: 'boolean',
+      },
+    },
   },
 }
 
@@ -68,6 +78,26 @@ export const sizes = () => ({
       <my-button type="primary" size="small">My cool small button</my-button>
       <div class="my-3" />
       <my-button type="primary" size="mini">My cool mini button</my-button>
+    </div>
+  `,
+})
+
+export const round = () => ({
+  components: { MyButton },
+  template: `
+    <div class="text-center">
+      <my-button type="primary" size="large" round>OK</my-button>
+      <div class="my-3" />
+    </div>
+  `,
+})
+
+export const square = () => ({
+  components: { MyButton },
+  template: `
+    <div class="text-center">
+      <my-button type="primary" size="large" square>OK</my-button>
+      <div class="my-3" />
     </div>
   `,
 })

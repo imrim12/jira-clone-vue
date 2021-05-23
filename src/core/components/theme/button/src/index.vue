@@ -4,6 +4,8 @@
     :class="[
       props.type ? `my-button--${props.type}` : '',
       props.size ? `my-button--${props.size}` : '',
+      props.square ? 'my-button--square' : '',
+      props.round ? 'my-button--square rounded-full' : '',
     ]"
     v-wave
   >
@@ -26,6 +28,14 @@ export default defineComponent({
       validator(value) {
         return ['large', 'medium', 'small', 'mini'].includes(value)
       },
+    },
+    square: {
+      type: Boolean,
+      default: false,
+    },
+    round: {
+      type: Boolean,
+      default: false,
     },
   },
 })
