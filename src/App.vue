@@ -17,11 +17,12 @@
 <script>
 import { defineComponent } from '@vue/composition-api'
 import {
-  LayoutDefault,
   LayoutAuth,
-  LayoutUnauth,
+  LayoutBlank,
+  LayoutDefault,
   LayoutError,
   LayoutMobile,
+  LayoutUnauth,
 } from '@layouts'
 // Loading component
 import { MyLoading } from '@/core/components/layout'
@@ -30,11 +31,12 @@ import { camelCase, startCase } from 'lodash'
 export default defineComponent({
   name: 'App',
   components: {
-    LayoutDefault,
     LayoutAuth,
-    LayoutUnauth,
+    LayoutBlank,
+    LayoutDefault,
     LayoutError,
     LayoutMobile,
+    LayoutUnauth,
     MyLoading,
   },
   provide() {

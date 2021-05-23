@@ -1,10 +1,10 @@
 {
   "Vue 2 composition API component": {
     "scope": "vue",
-    "prefix": "scf",
+    "prefix": "scf vue",
     "body": [
         "<template>",
-        "  <div class=\"${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}\">",
+        "  <div class=\"my-${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}\">",
         "    <!--  -->",
         "  </div>",
         "</template>",
@@ -22,13 +22,13 @@
         "</script>",
         "",
         "<style lang=\"scss\" scoped>",
-        ".${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g} {",
+        ".my-${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g} {",
         "  //",
         "}",
         "</style>",
         "",
         "<style lang=\"scss\">",
-        ".${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g} {",
+        ".my-${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g} {",
         "  //",
         "}",
         "</style>",

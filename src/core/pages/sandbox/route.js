@@ -7,5 +7,6 @@ export default new Route({
   meta: {
     title: 'sandbox.title',
     auth: false,
+    layout: 'blank',
   },
 })
