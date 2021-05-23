@@ -1,38 +1,13 @@
 <template>
   <div class="sandboxPageComponent">
-    <my-button type="primary" size="mini">
+    <my-button-icon type="primary" size="large" icon="arrow-up">
       Heehehehe
-    </my-button>
-    <my-button type="primary" size="small">
-      Heehehehe
-    </my-button>
-    <my-button type="primary" size="medium">
-      Heehehehe
-    </my-button>
-    <my-tooltip>
-      <my-button type="primary" size="medium">
-        Activate Tooltip
-      </my-button>
-      <template v-slot:body>
-        <div> Tooltip and stuff {{ count }} </div>
-      </template>
-    </my-tooltip>
-    <my-tooltip title="Hehheh tooltip title">
-      <my-button type="primary" size="medium">
-        Activate Tooltip
-      </my-button>
-    </my-tooltip>
-    <my-popover>
-      <my-button tooltip type="primary" size="medium">
-        Activate Popover
-      </my-button>
-      <template v-slot:body>
-        <div> Popover and stuff {{ count }} </div>
-      </template>
-    </my-popover>
+    </my-button-icon>
+    <MyIcon icon="bell" />
   </div>
 </template>
 <script>
+import { MyIcon } from '@theme'
 export default {
   name: 'SandboxPage',
   beforeRouteEnter(to, from, next) {
@@ -41,6 +16,9 @@ export default {
     } else {
       next({ name: 'dashboard' })
     }
+  },
+  components: {
+    MyIcon,
   },
   data() {
     return {

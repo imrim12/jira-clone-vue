@@ -39,4 +39,8 @@ export default {
     'Bạn không được thay đổi nội dung của người khác',
   FILE_UPLOAD_FAILED: 'Tải tệp tin thất bại',
   FILE_DELETE_FAILED: 'Xóa tệp tin thất bại',
+  'go-home': 'Về trang chủ',
+  'go-back': 'Về trang trước',
+  404: 'Không tìm thấy',
+  500: 'Lỗi máy chủ',
 }

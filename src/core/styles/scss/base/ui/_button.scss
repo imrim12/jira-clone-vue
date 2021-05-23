@@ -1,5 +1,6 @@
 .my-button {
-  display: inline;
+  display: inline-flex;
+  align-items: center;
   transition-duration: 300ms;
   padding: 0 10px;
   line-height: 32px;
