@@ -13,7 +13,7 @@
       v-if="!props.postfix"
       :icon="props.icon"
       :style="{
-        marginRight: `${slots.default ? props.gap * 0.25 : 0}rem`,
+        marginRight: `${slots().default ? props.gap * 0.25 : 0}rem`,
       }"
     />
     <slot />
