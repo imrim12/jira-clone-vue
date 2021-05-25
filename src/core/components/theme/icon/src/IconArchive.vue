@@ -1,0 +1,15 @@
+<template functional>
+  <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+    <g fill="currentColor" fill-rule="evenodd">
+      <path
+        d="M18.227 7C19.206 7 20 7.694 20 8.552v10.896c0 .857-.793 1.552-1.773 1.552H5.773C4.794 21 4 20.306 4 19.448V8.552C4 7.695 4.793 7 5.773 7h12.454zM18 9H6v10h12V9z"
+        fill-rule="nonzero"
+      ></path>
+      <path
+        d="M19.005 3C20.107 3 21 3.898 21 4.998V9H3V4.998c0-1.053.82-1.916 1.847-1.993L4.995 3h14.01zM19 5H5v2h14V5z"
+        fill-rule="nonzero"
+      ></path>
+      <path d="M9 12h6v2H9z"></path>
+    </g>
+  </svg>
+</template>

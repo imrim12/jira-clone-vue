@@ -1,4 +1,5 @@
 import { MyIcon } from '@/core/components/theme/icon'
+import { icons } from '../assets/iconList.js'
 
 const storyConfig = {
   title: 'UI Components/MyIcon',
@@ -13,20 +14,6 @@ const storyConfig = {
 
 export default storyConfig
 
-const icons = [
-  'add-item',
-  'backlog',
-  'bell',
-  'board',
-  'code',
-  'codeblock',
-  'link',
-  'pages',
-  'question',
-  'roadmap',
-  'setting',
-]
-
 export const tryAllOptions = (args, { argTypes }) => ({
   components: { MyIcon },
   props: Object.keys(argTypes),
@@ -37,7 +24,7 @@ export const tryAllOptions = (args, { argTypes }) => ({
   },
   template: `
     <div class="text-center">
-      <div v-for="icon in icons" class="inline-block text-gray mx-2 my-2">
+      <div v-for="icon in icons" class="inline-block text-gray mx-2 my-2" :title="icon">
         <my-icon v-bind="$props" v-bind:icon="icon" />
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { MyButtonIcon } from '@/core/components/theme/button-icon'
 import { MyIcon } from '@/core/components/theme/icon'
+import { icons } from '../assets/iconList.js'
 
 const storyConfig = {
   title: 'UI Components/MyButtonIcon',
@@ -53,20 +54,6 @@ const storyConfig = {
 }
 
 export default storyConfig
-
-const icons = [
-  'add-item',
-  'backlog',
-  'bell',
-  'board',
-  'code',
-  'codeblock',
-  'link',
-  'pages',
-  'question',
-  'roadmap',
-  'setting',
-]
 
 export const tryAllOptions = (args, { argTypes }) => ({
   components: { MyButtonIcon, MyIcon },
