@@ -1,0 +1,193 @@
+.my-dropdown-button-wrapper {
+  display: flex;
+  .my-dropdown-inner {
+    padding: 0.25rem 0;
+  }
+  .my-dropdown-item {
+    transition-duration: 300ms;
+    min-width: 150px;
+    min-height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    padding: 0 1rem 0 0.5rem;
+    &:hover {
+      background-color: var(--color-gray-100);
+    }
+  }
+}
+.my-dropdown-button {
+  display: inline-flex;
+  align-items: center;
+  transition-duration: 300ms;
+  padding: 0 10px;
+  line-height: 32px;
+  min-height: 32px;
+  box-shadow: none !important;
+  outline: none !important;
+  font-weight: 500;
+
+  border-radius: 3px 0 0 3px;
+  &-target {
+    border-radius: 0 3px 3px 0;
+  }
+
+  background-color: $--color-gray-100;
+  color: $--color-gray-800;
+  &:hover {
+    background-color: $--color-gray-200;
+  }
+  &:active {
+    background-color: $--color-gray-300;
+  }
+
+  &.my-dropdown-button--square {
+    justify-content: center;
+    padding: 0 5px;
+    height: 32px;
+    width: 32px;
+  }
+
+  &--large {
+    padding: 0 18px;
+    line-height: 48px;
+    min-height: 48px;
+    border-radius: 4px 0 0 4px;
+    &.my-dropdown-button-target {
+      border-radius: 0 4px 4px 0;
+    }
+    &.my-dropdown-button--square {
+      justify-content: center;
+      padding: 0 9px;
+      height: 48px;
+      width: 48px;
+    }
+  }
+
+  &--medium {
+    padding: 0 10px;
+    line-height: 32px;
+    min-height: 32px;
+    border-radius: 3px 0 0 3px;
+    &.my-dropdown-button-target {
+      border-radius: 0 3px 3px 0;
+    }
+    &.my-dropdown-button--square {
+      justify-content: center;
+      padding: 0 5px;
+      height: 32px;
+      width: 32px;
+    }
+  }
+
+  &--small {
+    padding: 0 8px;
+    line-height: 24px;
+    min-height: 24px;
+    font-size: 0.9rem;
+    border-radius: 3px 0 0 3px;
+    &.my-dropdown-button-target {
+      border-radius: 0 3px 3px 0;
+    }
+    &.my-dropdown-button--square {
+      justify-content: center;
+      padding: 0 4px;
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  &--mini {
+    padding: 0 8px;
+    line-height: 20px;
+    min-height: 20px;
+    font-size: 0.8rem;
+    border-radius: 2px 0 0 2px;
+    &.my-dropdown-button-target {
+      border-radius: 0 2px 2px 0;
+    }
+    &.my-dropdown-button--square {
+      justify-content: center;
+      padding: 0 4px;
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  &--primary {
+    background-color: $--color-primary;
+    color: $--color-white;
+    &:hover {
+      background-color: $--color-primary-600;
+    }
+    &:active {
+      background-color: $--color-primary-700;
+    }
+  }
+
+  &--light {
+    background-color: $--color-gray-100;
+    color: $--color-gray-800;
+    &:hover {
+      background-color: $--color-gray-200;
+    }
+    &:active {
+      background-color: $--color-gray-300;
+    }
+  }
+
+  &--success {
+    background-color: $--color-success;
+    color: $--color-white;
+    &:hover {
+      background-color: $--color-success-600;
+    }
+    &:active {
+      background-color: $--color-success-700;
+    }
+  }
+
+  &--danger {
+    background-color: $--color-danger;
+    color: $--color-white;
+    &:hover {
+      background-color: $--color-danger-600;
+    }
+    &:active {
+      background-color: $--color-danger-700;
+    }
+  }
+
+  &--warning {
+    background-color: $--color-warning;
+    color: $--color-gray-800;
+    &:hover {
+      background-color: $--color-warning-600;
+    }
+    &:active {
+      background-color: $--color-warning-700;
+    }
+  }
+
+  &--info {
+    background-color: $--color-info;
+    color: $--color-white;
+    &:hover {
+      background-color: $--color-info-600;
+    }
+    &:active {
+      background-color: $--color-info-700;
+    }
+  }
+
+  &--gray {
+    background-color: $--color-gray;
+    color: $--color-white;
+    &:hover {
+      background-color: $--color-gray-600;
+    }
+    &:active {
+      background-color: $--color-gray-700;
+    }
+  }
+
+}

@@ -5,7 +5,9 @@ import { MyButton } from './button'
 import { MyButtonIcon } from './button-icon'
 import { MyDraggableList } from './draggable-list'
 import { MyDropdown } from './dropdown'
+import { MyDropdownItem } from './dropdown-item'
 import { MyDropdownButton } from './dropdown-button'
+import { MyIcon } from './icon'
 import { MyInput } from './input'
 import { MyModal } from './modal'
 import { MyPopover } from './popover'
@@ -20,7 +22,9 @@ const components = [
   MyButtonIcon,
   MyDraggableList,
   MyDropdown,
+  MyDropdownItem,
   MyDropdownButton,
+  MyIcon,
   MyInput,
   MyModal,
   MyPopover,
@@ -46,7 +50,9 @@ export {
   MyButtonIcon,
   MyDraggableList,
   MyDropdown,
+  MyDropdownItem,
   MyDropdownButton,
+  MyIcon,
   MyInput,
   MyModal,
   MyPopover,

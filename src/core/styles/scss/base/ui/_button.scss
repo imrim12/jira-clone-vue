@@ -1,8 +1,10 @@
 .my-button {
-  display: inline;
+  display: inline-flex;
+  align-items: center;
   transition-duration: 300ms;
   padding: 0 10px;
   line-height: 32px;
+  min-height: 32px;
   border-radius: 3px;
   box-shadow: none !important;
   outline: none !important;
@@ -17,30 +19,65 @@
     background-color: $--color-gray-300;
   }
 
+  &.my-button--square {
+    justify-content: center;
+    padding: 0 5px;
+    height: 32px;
+    width: 32px;
+  }
+
   &--large {
     padding: 0 18px;
     line-height: 48px;
+    min-height: 48px;
     border-radius: 4px;
+    &.my-button--square {
+      justify-content: center;
+      padding: 0 9px;
+      height: 48px;
+      width: 48px;
+    }
   }
 
   &--medium {
     padding: 0 10px;
     line-height: 32px;
+    min-height: 32px;
     border-radius: 3px;
+    &.my-button--square {
+      justify-content: center;
+      padding: 0 5px;
+      height: 32px;
+      width: 32px;
+    }
   }
 
   &--small {
     padding: 0 8px;
     line-height: 24px;
+    min-height: 24px;
     font-size: 0.9rem;
     border-radius: 3px;
+    &.my-button--square {
+      justify-content: center;
+      padding: 0 4px;
+      height: 24px;
+      width: 24px;
+    }
   }
 
   &--mini {
     padding: 0 8px;
     line-height: 20px;
+    min-height: 20px;
     font-size: 0.8rem;
     border-radius: 2px;
+    &.my-button--square {
+      justify-content: center;
+      padding: 0 4px;
+      height: 20px;
+      width: 20px;
+    }
   }
 
   &--primary {

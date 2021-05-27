@@ -1,35 +1,16 @@
 <template>
   <div class="sandboxPageComponent">
-    <my-button type="primary" size="mini">
-      Heehehehe
-    </my-button>
-    <my-button type="primary" size="small">
-      Heehehehe
-    </my-button>
-    <my-button type="primary" size="medium">
-      Heehehehe
-    </my-button>
-    <my-tooltip>
-      <my-button type="primary" size="medium">
-        Activate Tooltip
-      </my-button>
-      <template v-slot:body>
-        <div> Tooltip and stuff {{ count }} </div>
+    <my-dropdown>
+      Hello
+      <template slot="body">
+        <my-dropdown-item>
+          So anyway
+        </my-dropdown-item>
+        <my-dropdown-item>
+          Hỏny
+        </my-dropdown-item>
       </template>
-    </my-tooltip>
-    <my-tooltip title="Hehheh tooltip title">
-      <my-button type="primary" size="medium">
-        Activate Tooltip
-      </my-button>
-    </my-tooltip>
-    <my-popover>
-      <my-button tooltip type="primary" size="medium">
-        Activate Popover
-      </my-button>
-      <template v-slot:body>
-        <div> Popover and stuff {{ count }} </div>
-      </template>
-    </my-popover>
+    </my-dropdown>
   </div>
 </template>
 <script>
