@@ -1,11 +1,19 @@
 <template>
   <div class="sandboxPageComponent">
-    <my-button-icon type="primary" size="large" icon="plus">OK</my-button-icon>
-    <MyIcon icon="bell" />
+    <my-dropdown>
+      Hello
+      <template slot="body">
+        <my-dropdown-item>
+          So anyway
+        </my-dropdown-item>
+        <my-dropdown-item>
+          Hỏny
+        </my-dropdown-item>
+      </template>
+    </my-dropdown>
   </div>
 </template>
 <script>
-import { MyIcon } from '@theme'
 export default {
   name: 'SandboxPage',
   beforeRouteEnter(to, from, next) {
@@ -14,9 +22,6 @@ export default {
     } else {
       next({ name: 'dashboard' })
     }
-  },
-  components: {
-    MyIcon,
   },
   data() {
     return {

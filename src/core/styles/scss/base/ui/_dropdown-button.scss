@@ -1,14 +1,35 @@
-.my-button {
+.my-dropdown-button-wrapper {
+  display: flex;
+  .my-dropdown-inner {
+    padding: 0.25rem 0;
+  }
+  .my-dropdown-item {
+    transition-duration: 300ms;
+    min-width: 150px;
+    min-height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    padding: 0 1rem 0 0.5rem;
+    &:hover {
+      background-color: var(--color-gray-100);
+    }
+  }
+}
+.my-dropdown-button {
   display: inline-flex;
   align-items: center;
   transition-duration: 300ms;
   padding: 0 10px;
   line-height: 32px;
   min-height: 32px;
-  border-radius: 3px;
   box-shadow: none !important;
   outline: none !important;
   font-weight: 500;
+
+  border-radius: 3px 0 0 3px;
+  &-target {
+    border-radius: 0 3px 3px 0;
+  }
 
   background-color: $--color-gray-100;
   color: $--color-gray-800;
@@ -19,7 +40,7 @@
     background-color: $--color-gray-300;
   }
 
-  &.my-button--square {
+  &.my-dropdown-button--square {
     justify-content: center;
     padding: 0 5px;
     height: 32px;
@@ -30,8 +51,11 @@
     padding: 0 18px;
     line-height: 48px;
     min-height: 48px;
-    border-radius: 4px;
-    &.my-button--square {
+    border-radius: 4px 0 0 4px;
+    &.my-dropdown-button-target {
+      border-radius: 0 4px 4px 0;
+    }
+    &.my-dropdown-button--square {
       justify-content: center;
       padding: 0 9px;
       height: 48px;
@@ -43,8 +67,11 @@
     padding: 0 10px;
     line-height: 32px;
     min-height: 32px;
-    border-radius: 3px;
-    &.my-button--square {
+    border-radius: 3px 0 0 3px;
+    &.my-dropdown-button-target {
+      border-radius: 0 3px 3px 0;
+    }
+    &.my-dropdown-button--square {
       justify-content: center;
       padding: 0 5px;
       height: 32px;
@@ -57,8 +84,11 @@
     line-height: 24px;
     min-height: 24px;
     font-size: 0.9rem;
-    border-radius: 3px;
-    &.my-button--square {
+    border-radius: 3px 0 0 3px;
+    &.my-dropdown-button-target {
+      border-radius: 0 3px 3px 0;
+    }
+    &.my-dropdown-button--square {
       justify-content: center;
       padding: 0 4px;
       height: 24px;
@@ -71,8 +101,11 @@
     line-height: 20px;
     min-height: 20px;
     font-size: 0.8rem;
-    border-radius: 2px;
-    &.my-button--square {
+    border-radius: 2px 0 0 2px;
+    &.my-dropdown-button-target {
+      border-radius: 0 2px 2px 0;
+    }
+    &.my-dropdown-button--square {
       justify-content: center;
       padding: 0 4px;
       height: 20px;

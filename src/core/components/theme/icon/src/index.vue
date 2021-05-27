@@ -3,6 +3,7 @@
 </template>
 <script>
 import { defineComponent } from '@vue/composition-api'
+import { upperFirst, camelCase } from 'lodash'
 import IconDefault from './IconDefault.vue'
 
 export default defineComponent({
@@ -15,8 +16,7 @@ export default defineComponent({
   },
   computed: {
     iconName() {
-      return `Icon${this.icon[0].toUpperCase() +
-        this.icon.slice(1).toLowerCase()}`
+      return `Icon${upperFirst(camelCase(this.icon))}`
     },
     iconComponent() {
       return () => ({

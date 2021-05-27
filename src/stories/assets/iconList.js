@@ -4,6 +4,7 @@ export const icons = [
   'backlog',
   'bell',
   'board',
+  'chevron-down',
   'code',
   'codeblock',
   'comment',

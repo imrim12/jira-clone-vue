@@ -1,0 +1,16 @@
+.my-dropdown-wrapper {
+  .my-dropdown-inner {
+    padding: 0.25rem 0;
+  }
+  .my-dropdown-item {
+    transition-duration: 300ms;
+    min-width: 150px;
+    min-height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    padding: 0 1rem 0 0.5rem;
+    &:hover {
+      background-color: var(--color-gray-100);
+    }
+  }
+}

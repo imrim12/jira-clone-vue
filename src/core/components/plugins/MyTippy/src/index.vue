@@ -20,6 +20,7 @@ import 'tippy.js/animations/scale.css'
 
 export default defineComponent({
   name: 'MyTippy',
+  emits: ['hide', 'mount', 'destroy'],
   props: {
     // See all props in tippy.js docs: https://atomiks.github.io/tippyjs/v6/all-props
     options: {
@@ -42,6 +43,11 @@ export default defineComponent({
     },
     title: String,
   },
+  data() {
+    return {
+      instance: null,
+    }
+  },
   computed: {
     handler() {
       return this.$refs.handler
@@ -50,18 +56,52 @@ export default defineComponent({
       return this.$refs.container
     },
   },
+  watch: {
+    options: {
+      deep: true,
+      handler() {
+        this.resetTippy()
+      },
+    },
+    placement() {
+      this.resetTippy()
+    },
+    trigger() {
+      this.resetTippy()
+    },
+  },
   methods: {
+    onHide(instance) {
+      this.$emit('hide', instance)
+    },
+    onMount(instance) {
+      this.$emit('mount', instance)
+    },
+    onDestroy(instance) {
+      this.$emit('destroy', instance)
+    },
     initiateTippy() {
-      tippy(this.handler, {
+      this.instance = tippy(this.handler, {
         ...this.options,
         allowHTML: true,
         content: this.container,
         placement: this.placement,
         theme: this.theme,
         trigger: this.trigger,
-        offset: [0, 20],
+        offset: [0, 15],
         animation: 'scale',
+        // See docs: https://atomiks.github.io/tippyjs/v6/all-props/#interactive
+        interactive: true,
+        onHide: this.onHide,
+        onMount: this.onMount,
+        onDestroy: this.onDestroy,
       })
+    },
+    resetTippy() {
+      if (this.instance) {
+        this.instance.destroy()
+        this.initiateTippy()
+      }
     },
   },
   mounted() {
@@ -69,3 +109,15 @@ export default defineComponent({
   },
 })
 </script>
+
+<style lang="scss">
+.tippy-box {
+}
+.tippy-backdrop {
+}
+.tippy-arrow {
+}
+.tippy-content {
+  padding: 0;
+}
+</style>
