@@ -1,5 +1,6 @@
 import { MyDropdownButton } from '@/core/components/theme/dropdown-button'
 import { MyDropdownItem } from '@/core/components/theme/dropdown-item'
+import { types as typeList } from '../assets/typeList'
 
 const storyConfig = {
   title: 'UI Components/MyTippy/MyDropdownButton',
@@ -21,15 +22,7 @@ const storyConfig = {
     type: {
       control: {
         type: 'select',
-        options: [
-          'primary',
-          'light',
-          'success',
-          'danger',
-          'warning',
-          'info',
-          'gray',
-        ],
+        options: typeList,
       },
     },
     size: {

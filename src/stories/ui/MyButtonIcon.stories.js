@@ -1,6 +1,7 @@
 import { MyButtonIcon } from '@/core/components/theme/button-icon'
 import { MyIcon } from '@/core/components/theme/icon'
 import { icons } from '../assets/iconList.js'
+import { types as typeList } from '../assets/typeList'
 
 const storyConfig = {
   title: 'UI Components/MyButtonIcon',
@@ -10,15 +11,7 @@ const storyConfig = {
     type: {
       control: {
         type: 'select',
-        options: [
-          'primary',
-          'light',
-          'success',
-          'danger',
-          'warning',
-          'info',
-          'gray',
-        ],
+        options: typeList,
       },
     },
     size: {

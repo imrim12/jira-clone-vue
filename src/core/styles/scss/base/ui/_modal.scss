@@ -1,0 +1,93 @@
+.my-modal {
+  $--modal-z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  z-index: $--modal-z-index;
+
+  &-container {
+    position: relative;
+    z-index: $--modal-z-index;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 3px;
+    overflow: hidden;
+    min-height: 100px;
+    max-width: 90vw;
+    width: 1023px;
+    @media (max-width: 1023px) { width: 767px; }
+    @media (max-width: 767px) { width: 575px; }
+    @media (max-width: 575px) { width: 320px; }
+  }
+  &--fullscreen {
+    .my-modal-container {
+      height: 100vh;
+      max-width: 100vw;
+      width: 100vw;
+    }
+  }
+  &--large {
+    .my-modal-container {
+      width: 1279px;
+      @media (max-width: 1279px) { width: 1023px; }
+      @media (max-width: 1023px) { width: 767px; }
+      @media (max-width: 767px) { width: 575px; }
+      @media (max-width: 575px) { width: 320px; }
+    }
+  }
+  &--medium {
+    .my-modal-container {
+      width: 1023px;
+      @media (max-width: 1023px) { width: 767px; }
+      @media (max-width: 767px) { width: 575px; }
+      @media (max-width: 575px) { width: 320px; }
+    }
+  }
+  &--small {
+    .my-modal-container {
+      width: 767px;
+      @media (max-width: 767px) { width: 575px; }
+      @media (max-width: 575px) { width: 320px; }
+    }
+  }
+  &--mini {
+    .my-modal-container {
+      width: 575px;
+      @media (max-width: 575px) { width: 320px; }
+    }
+  }
+  //
+  &-header {
+    display: flex;
+    align-items: center;
+    min-height: 82px;
+    padding: 22px 32px;
+  }
+  &-body {
+    min-height: 100px;
+    padding: 0 32px;
+  }
+  &-footer {
+    display: flex;
+    align-items: center;
+    min-height: 82px;
+    padding: 22px 32px;
+  }
+  &-backdrop {
+    background-color: rgba($--color-primary-800, 0.5);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $--modal-z-index - 1;
+  }
+}

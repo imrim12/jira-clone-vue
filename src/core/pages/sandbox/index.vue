@@ -1,16 +1,9 @@
 <template>
   <div class="sandboxPageComponent">
-    <my-dropdown>
-      Hello
-      <template slot="body">
-        <my-dropdown-item>
-          So anyway
-        </my-dropdown-item>
-        <my-dropdown-item>
-          Hỏny
-        </my-dropdown-item>
-      </template>
-    </my-dropdown>
+    <my-button @click="isVisible = true">Show modal</my-button>
+    <my-modal v-model="isVisible">
+      Hehe
+    </my-modal>
   </div>
 </template>
 <script>
@@ -26,6 +19,7 @@ export default {
   data() {
     return {
       count: 0,
+      isVisible: true,
     }
   },
   mounted() {

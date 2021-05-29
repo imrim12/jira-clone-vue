@@ -11,7 +11,9 @@ import { MyButton } from '@/core/components/theme/button'
 import { MyButtonIcon } from '@/core/components/theme/button-icon'
 import { MyDraggableList } from '@/core/components/theme/draggable-list'
 import { MyDropdown } from '@/core/components/theme/dropdown'
+import { MyDropdownItem } from '@/core/components/theme/dropdown-item'
 import { MyDropdownButton } from '@/core/components/theme/dropdown-button'
+import { MyIcon } from '@/core/components/theme/icon'
 import { MyInput } from '@/core/components/theme/input'
 import { MyModal } from '@/core/components/theme/modal'
 import { MyPopover } from '@/core/components/theme/popover'
@@ -28,7 +30,9 @@ const components = [
   MyButtonIcon,
   MyDraggableList,
   MyDropdown,
+  MyDropdownItem,
   MyDropdownButton,
+  MyIcon,
   MyInput,
   MyModal,
   MyPopover,

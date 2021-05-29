@@ -1,4 +1,5 @@
 import { MyButton } from '@/core/components/theme/button'
+import { types as typeList } from '../assets/typeList'
 
 const storyConfig = {
   title: 'UI Components/MyButton',
@@ -8,15 +9,7 @@ const storyConfig = {
     type: {
       control: {
         type: 'select',
-        options: [
-          'primary',
-          'light',
-          'success',
-          'danger',
-          'warning',
-          'info',
-          'gray',
-        ],
+        options: typeList,
       },
     },
     size: {
@@ -50,19 +43,12 @@ export const types = () => ({
   components: { MyButton },
   template: `
     <div class="text-center">
-      <my-button type="primary">My cool primary button</my-button>
-      <div class="my-3" />
-      <my-button type="light">My cool light button</my-button>
-      <div class="my-3" />
-      <my-button type="success">My cool success button</my-button>
-      <div class="my-3" />
-      <my-button type="danger">My cool danger button</my-button>
-      <div class="my-3" />
-      <my-button type="warning">My cool warning button</my-button>
-      <div class="my-3" />
-      <my-button type="info">My cool info button</my-button>
-      <div class="my-3" />
-      <my-button type="gray">My cool gray button</my-button>
+      <div v-for="type in typeList">
+        <my-button v-bind="$props" v-bind:type="type">
+          My cool {{ type }} button
+        </my-button>
+        <div class="my-3" />
+      </div>
     </div>
   `,
 })

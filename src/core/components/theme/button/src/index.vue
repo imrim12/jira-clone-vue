@@ -1,5 +1,6 @@
 <template functional>
   <button
+    v-on="listeners"
     class="my-button"
     :class="[
       props.type ? `my-button--${props.type}` : '',

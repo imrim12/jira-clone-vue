@@ -19,4 +19,5 @@ export const icons = [
   'roadmap',
   'setting',
   'star',
+  'time',
 ]
