@@ -1,6 +1,6 @@
 <template>
   <div class="sandboxPageComponent">
-    <my-breadcrumb></my-breadcrumb>
+    <my-input pre-icon="search"></my-input>
   </div>
 </template>
 <script>
