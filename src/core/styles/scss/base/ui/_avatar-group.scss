@@ -1,0 +1,44 @@
+.my-avatar-group {
+  --border-width: 3px;
+  --avatar-size: 32px;
+  display: flex;
+  &-item {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 9999px;
+    transition-duration: 300ms;
+    background-color: var(--color-white);
+    border: var(--border-width) solid var(--color-white);
+    width: calc(var(--avatar-size) + var(--border-width) * 2);
+    height: calc(var(--avatar-size) + var(--border-width) * 2);
+    &:hover {
+      background-color: var(--color-gray-100);
+      border: var(--border-width) solid var(--color-gray-100);
+      transform: translateY(-5px);
+    }
+    &-title {
+      background-color: var(--color-primary-800);
+      color: white;
+      padding: 0 5px;
+      font-weight: 500;
+      font-size: 0.8rem;
+      border-radius: 4px;
+    }
+  }
+  &--large {
+    --avatar-size: 42px;
+    --border-width: 4px;
+  }
+  &--medium {
+    --avatar-size: 32px;
+    --border-width: 3px;
+  }
+  &--small {
+    --avatar-size: 24px;
+    --border-width: 2px;
+  }
+  &--mini {
+    --avatar-size: 1rem;
+    --border-width: 2px;
+  }
+}
