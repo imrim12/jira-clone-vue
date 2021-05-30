@@ -5,7 +5,7 @@
     </span>
     <div class="my-tooltip-inner" ref="container">
       <slot name="body">
-        {{ title }}
+        <small style="padding: 0 5px; font-weight: 600">{{ title }}</small>
       </slot>
     </div>
   </span>

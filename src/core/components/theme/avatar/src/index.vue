@@ -2,18 +2,32 @@
   <div
     class="my-avatar"
     :class="[size ? `my-avatar--${size}` : '', round ? 'rounded-full' : '']"
+    :style="
+      isNumber || isShortName
+        ? {
+            backgroundColor: 'var(--color-primary-800)',
+            color: 'white',
+            fontWeight: 'bold',
+          }
+        : {}
+    "
   >
     <img
-      v-if="!hasError"
+      v-if="!hasError && isUrl"
       :src="src"
       :title="alt"
       :alt="alt"
       @error="handleError"
     />
+    <!-- eslint-disable-next-line vue/no-parsing-error -->
+    <div v-else-if="isNumber"> {{ src <= 99 ? src : 99 }}+ </div>
+    <div v-else-if="isShortName">
+      {{ src }}
+    </div>
     <template v-else>
       <slot name="error">
         <div class="my-avatar-error">
-          <MyIcon icon="default" />
+          <MyIcon :icon="src" />
         </div>
       </slot>
     </template>
@@ -29,7 +43,7 @@ export default defineComponent({
   components: { MyIcon },
   props: {
     src: {
-      type: String,
+      type: [String, Number],
       required: true,
     },
     alt: {
@@ -55,6 +69,17 @@ export default defineComponent({
       this.hasError = false
     },
   },
+  computed: {
+    isUrl() {
+      return typeof this.src === 'string' && this.src?.includes('http')
+    },
+    isNumber() {
+      return !isNaN(this.src)
+    },
+    isShortName() {
+      return typeof this.src === 'string' && this.src?.length === 2
+    },
+  },
   methods: {
     handleError() {
       this.hasError = true
@@ -62,49 +87,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style lang="scss">
-.my-avatar {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 3px;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  &-error {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-gray-100);
-    color: var(--color-danger);
-  }
-  &--large {
-    width: 42px;
-    height: 42px;
-    border-radius: 4px;
-  }
-  &--medium {
-    width: 32px;
-    height: 32px;
-    border-radius: 3px;
-  }
-  &--small {
-    width: 24px;
-    height: 24px;
-    border-radius: 2px;
-  }
-  &--mini {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 2px;
-  }
-}
-</style>

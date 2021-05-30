@@ -41,6 +41,14 @@ export default defineComponent({
       type: String,
       default: 'mouseenter',
     },
+    offsetX: {
+      type: Number,
+      default: 0,
+    },
+    offsetY: {
+      type: Number,
+      default: 10,
+    },
     title: String,
   },
   data() {
@@ -81,20 +89,22 @@ export default defineComponent({
       this.$emit('destroy', instance)
     },
     initiateTippy() {
-      this.instance = tippy(this.handler, {
+      this.instance = tippy(this.$refs.handler.childNodes[0], {
         ...this.options,
         allowHTML: true,
         content: this.container,
         placement: this.placement,
         theme: this.theme,
         trigger: this.trigger,
-        offset: [0, 15],
+        offset: [this.offsetX, this.offsetY],
         animation: 'scale',
         // See docs: https://atomiks.github.io/tippyjs/v6/all-props/#interactive
         interactive: true,
+        interactiveBorder: 10,
         onHide: this.onHide,
         onMount: this.onMount,
         onDestroy: this.onDestroy,
+        appendTo: document.body,
       })
     },
     resetTippy() {

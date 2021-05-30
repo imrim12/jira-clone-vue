@@ -1,10 +1,6 @@
 <template>
   <div class="sandboxPageComponent">
-    <my-avatar
-      width="300"
-      height="400"
-      src="https://images.pexels.com/photos/6293900/pexels-photo-6293900.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-    ></my-avatar>
+    <my-avatar-group></my-avatar-group>
   </div>
 </template>
 <script>

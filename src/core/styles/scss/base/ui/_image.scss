@@ -1,0 +1,19 @@
+.my-image {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  & > img {
+    width: 100%;
+    height: 100%;
+  }
+  &-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-gray-100);
+    color: var(--color-danger);
+  }
+}

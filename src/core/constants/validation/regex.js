@@ -20,7 +20,7 @@ export const html = /^<([a-z1-6]+)([^<]+)*(?:>(.*)<\/\1>| *\/>)$/g
 export const html_img = /^<\s*img[^>]+src\s*=\s*(["'])(.*?)\1[^>]*>$/g
 
 // URL only, not include query
-export const url = /^((https?|ftp|file):\/\/)?([\da-z_\\.-]+)\.([a-z\\.]{2,6})([\\/\w \\.-]*)*\/?$/g
+export const url = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w.-]+)+[\w\-._~:/?#[\]@!$&'()*+,;=.]+$/g
 export const slug = /^[a-z0-9-]+$/
 // Youtube video normal URL or share URL
 export const youtube = /https?:\/\/(?:youtu\.be\/|(?:[a-z]{2,3}\.)?youtube\.com\/watch(?:\?|#\\!)v=)([\w-]{11}).*/gi
