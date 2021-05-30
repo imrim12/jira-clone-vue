@@ -1,9 +1,10 @@
 <template>
   <div class="sandboxPageComponent">
-    <my-button @click="isVisible = true">Show modal</my-button>
-    <my-modal v-model="isVisible">
-      Hehe
-    </my-modal>
+    <my-avatar
+      width="300"
+      height="400"
+      src="https://images.pexels.com/photos/6293900/pexels-photo-6293900.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    ></my-avatar>
   </div>
 </template>
 <script>
