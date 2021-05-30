@@ -1,16 +1,10 @@
 <template>
   <div
     class="my-image"
-    :class="[
-      size ? `my-image--${size}` : '',
-      square ? 'my-image--square' : '',
-      round ? 'my-image--square rounded-full' : '',
-    ]"
     :style="{
       width: height ? `${width}px` : false,
       height: height ? `${height}px` : false,
     }"
-    ref="myAvatarRef"
   >
     <img
       v-if="!hasError"
@@ -58,11 +52,6 @@ export default defineComponent({
         return !isNaN(value)
       },
     },
-    size: {
-      validator(value) {
-        return ['large', 'medium', 'small', 'mini'].includes(value)
-      },
-    },
     fit: {
       validator(value) {
         return ['cover', 'contain', 'fill', 'scale-down', 'none'].includes(
@@ -70,14 +59,6 @@ export default defineComponent({
         )
       },
       default: 'cover',
-    },
-    square: {
-      type: Boolean,
-      default: false,
-    },
-    round: {
-      type: Boolean,
-      default: false,
     },
   },
   data() {
@@ -104,8 +85,7 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  // border-radius: 9999px;
-  img {
+  & > img {
     width: 100%;
     height: 100%;
   }
@@ -117,16 +97,6 @@ export default defineComponent({
     height: 100%;
     background-color: var(--color-gray-100);
     color: var(--color-danger);
-  }
-  &--large {
-  }
-  &--medium {
-  }
-  &--small {
-  }
-  &--mini {
-  }
-  &--square {
   }
 }
 </style>

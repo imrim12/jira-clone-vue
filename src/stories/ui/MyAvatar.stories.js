@@ -58,11 +58,6 @@ allSizes.args = {
 export const tryAllOptions = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { MyAvatar },
-  data() {
-    return {
-      sizeOptions: argTypes.size.control.options,
-    }
-  },
   template: `
   <div class="text-center">
     <my-avatar v-bind="$props"></my-avatar>

@@ -1,1 +1,1 @@
-export { default as MyAvatar } from './src/index.vue'
+export { default as MyImage } from './src/index.vue'

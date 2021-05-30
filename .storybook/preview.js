@@ -14,6 +14,7 @@ import { MyDropdown } from '@/core/components/theme/dropdown'
 import { MyDropdownItem } from '@/core/components/theme/dropdown-item'
 import { MyDropdownButton } from '@/core/components/theme/dropdown-button'
 import { MyIcon } from '@/core/components/theme/icon'
+import { MyImage } from '@/core/components/theme/image'
 import { MyInput } from '@/core/components/theme/input'
 import { MyModal } from '@/core/components/theme/modal'
 import { MyPopover } from '@/core/components/theme/popover'
@@ -33,6 +34,7 @@ const components = [
   MyDropdownItem,
   MyDropdownButton,
   MyIcon,
+  MyImage,
   MyInput,
   MyModal,
   MyPopover,
