@@ -1,0 +1,15 @@
+.my-breadcrumb {
+  font-weight: 400;
+  color: var(--color-gray);
+  transition-duration: 300;
+  &-link {
+    :hover {
+      color: var(--color-primary-300);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
+  }
+  &-slash {
+    padding: 0 8px;
+  }
+}

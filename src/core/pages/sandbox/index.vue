@@ -1,6 +1,6 @@
 <template>
   <div class="sandboxPageComponent">
-    <my-avatar-group></my-avatar-group>
+    <my-breadcrumb></my-breadcrumb>
   </div>
 </template>
 <script>

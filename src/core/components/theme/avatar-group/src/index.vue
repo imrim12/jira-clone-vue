@@ -45,56 +45,23 @@ export default defineComponent({
       },
     },
     data: {
-      type: Array,
+      type: Array, // Array<{src: string | number, title: string}>
       default() {
-        return [
-          {
-            src: 'https://nguyenhuunguyeny.com/img/me/1.jpg',
-            title: 'Nguyễn Hữu Nguyên Ý',
-          },
-          {
-            src: 'https://nguyenhuunguyeny.com/img/me/2.JPG',
-            title: 'Ý Nguyên Hữu Nguyễn',
-          },
-          {
-            src: 'https://nguyenhuunguyeny.com/img/me/8.jpg',
-            title: 'Nguyên Ý Hữu',
-          },
-          {
-            src: 'https://nguyenhuunguyeny.com/img/me/1.jpg',
-            title: 'Nguyễn Hữu Nguyên Ý',
-          },
-          {
-            src: 'https://nguyenhuunguyeny.com/img/me/8.jpg',
-            title: 'Nguyên Ý Hữu',
-          },
-          {
-            src: 'https://nguyenhuunguyeny.com/img/me/1.jpg',
-            title: 'Nguyễn Hữu Nguyên Ý',
-          },
-          {
-            src: 'https://nguyenhuunguyeny.com/img/me/2.JPG',
-            title: 'Ý Nguyên Hữu Nguyễn',
-          },
-          {
-            src: 'https://nguyenhuunguyeny.com/img/me/8.jpg',
-            title: 'Nguyên Ý Hữu',
-          },
-        ]
+        return []
       },
     },
     default: {
       type: Array,
       default() {
         return [
-          {
-            src: 'user',
-            title: 'Unassigned',
-          },
-          {
-            src: 'plus',
-            title: 'Add more user',
-          },
+          // {
+          //   src: 'user',
+          //   title: 'Unassigned',
+          // },
+          // {
+          //   src: 'plus',
+          //   title: 'Add more user',
+          // },
         ]
       },
     },
