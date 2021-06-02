@@ -1,6 +1,4 @@
 .my-input {
-  --input-width: 180px;
-  width: var(--input-width);
   transition-duration: 300ms;
   height: 32px;
   border: 2px solid var(--color-gray-200);
@@ -46,7 +44,6 @@
     background-color: var(--color-gray-100);
   }
   &.my-input-focus {
-    width: calc(var(--input-width) * 1.5);
     background-color: white;
     border: 2px solid var(--color-primary-200);
   }

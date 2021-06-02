@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@vue/composition-api": "^1.0.0-rc.5",
+    "async-validator": "^3.5.2",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "lodash": "^4.17.21",

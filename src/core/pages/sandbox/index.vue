@@ -1,6 +1,15 @@
 <template>
   <div class="sandboxPageComponent">
-    <my-input pre-icon="search"></my-input>
+    <form @submit.prevent="count++">
+      <my-input
+        prefix="search"
+        v-model="hehe"
+        :validate="{
+          pattern: '.{6,}',
+          message: 'Please enter at least 5 letters',
+        }"
+      ></my-input>
+    </form>
   </div>
 </template>
 <script>
@@ -17,6 +26,7 @@ export default {
     return {
       count: 0,
       isVisible: true,
+      hehe: '',
     }
   },
   mounted() {
