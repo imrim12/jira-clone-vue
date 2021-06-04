@@ -1,9 +1,9 @@
 <script>
-// src\core\components\theme\table-simple\src\index.vue
+// src\core\components\theme\table\src\index.vue
 import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
-  name: 'MyTableSimple',
+  name: 'MyTable',
   props: {
     data: {
       type: Array,
@@ -31,12 +31,12 @@ export default defineComponent({
     classFooterCell: String,
   },
   render(h) {
-    return h('div', { class: 'my-table-simple' }, [
-      h('table', { class: 'my-table-simple-inner' }, [
+    return h('div', { class: 'my-table' }, [
+      h('table', { class: 'my-table-inner' }, [
         h(
           'thead',
           {
-            class: 'my-table-simple-header',
+            class: 'my-table-header',
             attrs: { class: this.classHeader },
           },
           [
@@ -70,7 +70,7 @@ export default defineComponent({
 
         h(
           'tbody',
-          { class: 'my-table-simple-body', attrs: { class: this.classBody } },
+          { class: 'my-table-body', attrs: { class: this.classBody } },
           [
             this.data.map((row, index) =>
               h(
@@ -81,7 +81,7 @@ export default defineComponent({
                     h(
                       'td',
                       {
-                        class: 'my-table-simple-cell',
+                        class: 'my-table-cell',
                         attrs: {
                           key: 'table-cell-' + idx,
                           class: this.classCell,
@@ -111,7 +111,7 @@ export default defineComponent({
           ? h(
               'tfoot',
               {
-                class: 'my-table-simple-footer',
+                class: 'my-table-footer',
                 attrs: { class: this.classFooter },
               },
               [
@@ -150,7 +150,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.my-table-simple {
+.my-table {
   table {
     border-collapse: collapse;
     width: 100%;

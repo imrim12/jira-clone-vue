@@ -16,8 +16,8 @@
     <input
       class="my-input-inner"
       :class="{
-        'my-input-inner--hasPreIcon': !!prefix,
-        'my-input-inner--hasPostIcon': !!postfix,
+        'my-input-inner--prefix': !!prefix,
+        'my-input-inner--postfix': !!postfix,
       }"
       :type="type"
       :pattern="validate.pattern"

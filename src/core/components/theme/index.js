@@ -12,6 +12,7 @@ import { MyImage } from './image'
 import { MyInput } from './input'
 import { MyModal } from './modal'
 import { MyPopover } from './popover'
+import { MyTable } from './table'
 import { MyTableSimple } from './table-simple'
 import { MyTooltip } from './tooltip'
 
@@ -30,6 +31,7 @@ const components = [
   MyInput,
   MyModal,
   MyPopover,
+  MyTable,
   MyTableSimple,
   MyTooltip,
 ]
@@ -59,6 +61,7 @@ export {
   MyInput,
   MyModal,
   MyPopover,
+  MyTable,
   MyTableSimple,
   MyTooltip,
 }
