@@ -1,0 +1,29 @@
+.tippy-box[data-theme~='tomato'] {
+  background-color: tomato;
+  color: yellow;
+}
+
+.tippy-box[data-theme~='primary'] {
+  background-color: var(--color-primary-800);
+  color: white;
+}
+
+.tippy-box[data-theme~='success'] {
+  background-color: var(--color-success);
+  color: white;
+}
+
+.tippy-box[data-theme~='danger'] {
+  background-color: var(--color-danger);
+  color: white;
+}
+
+.tippy-box[data-theme~='info'] {
+  background-color: var(--color-info);
+  color: white;
+}
+
+.tippy-box[data-theme~='warning'] {
+  background-color: var(--color-warning);
+  color: var(--color-gray-800);
+}

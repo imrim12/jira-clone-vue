@@ -1,0 +1,40 @@
+.my-table-simple {
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  thead {
+    border-bottom: 2px solid rgb(223, 225, 230);
+  }
+
+  tfoot {
+    border-top: 2px solid rgb(223, 225, 230);
+  }
+
+  th {
+    padding: 4px 8px;
+    border: none;
+    color: rgb(94, 108, 132);
+    box-sizing: border-box;
+    font-size: 12px;
+    font-weight: 600;
+    position: relative;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  tr {
+    transition-duration: 300ms;
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+
+  td {
+    padding: 10px 0px;
+    border: none;
+    overflow: hidden;
+    text-align: left;
+  }
+}

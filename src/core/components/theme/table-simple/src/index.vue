@@ -21,18 +21,43 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
-    classHeader: String,
-    classBody: String,
-    classFooter: String,
-    classRow: String,
-    classCell: String,
-    classHeaderCell: String,
-    classBodyCell: String,
-    classFooterCell: String,
+    classHeader: { type: String },
+    classBody: { type: String },
+    classFooter: { type: String },
+    classRow: { type: String },
+    classCell: { type: String },
+    classHeaderCell: { type: String },
+    classBodyCell: { type: String },
+    classFooterCell: { type: String },
   },
   render(h) {
+    /**
+     * @param {*} col
+     * @param {"header" | "footer"} slotPrefix
+     *
+     * @returns {VNode} slot or scopedSlot vnode
+     */
+    const tableHeaderSlotBlock = (col, slotPrefix) => {
+      // If has default header / footer with or without scope
+      // For <template v-slot:header="scope">
+      return this.$scopedSlots?.[slotPrefix]
+        ? this.$scopedSlots?.[slotPrefix]({
+            ...col,
+          })
+        : this.$slots[slotPrefix] ||
+          // If not check custom header / footer with or without scope
+          // For <template v-slot:header-something="scope">
+          this.$scopedSlots?.[`${slotPrefix}-` + col.prop]
+        ? this.$scopedSlots?.[`${slotPrefix}-` + col.prop]({
+            ...col,
+          })
+        : // Else
+          this.$slots[`${slotPrefix}-` + col.prop] || col.header
+    }
+
     return h('div', { class: 'my-table-simple' }, [
       h('table', { class: 'my-table-simple-inner' }, [
+        /* TABLE HEADER */
         h(
           'thead',
           {
@@ -50,7 +75,7 @@ export default defineComponent({
                         key: 'table-header-' + index,
                       },
                     },
-                    [this.$slots['header-' + col.prop] || col.header]
+                    [tableHeaderSlotBlock(col, 'header-')]
                   )
                 )
               : Object.keys(this.data[0]).map((header, index) =>
@@ -68,6 +93,7 @@ export default defineComponent({
           ]
         ),
 
+        /* TABLE BODY */
         h(
           'tbody',
           { class: 'my-table-simple-body', attrs: { class: this.classBody } },
@@ -88,11 +114,13 @@ export default defineComponent({
                         },
                       },
                       // If use default slot
+                      // For <template v-slot:cell="scope">
                       this.$scopedSlots?.default
                         ? this.$scopedSlots?.default({
                             ...row,
                           })
                         : // If use dynamic cell slot
+                        // For <template v-slot:cell-something="scope">
                         this.$scopedSlots?.['cell-' + col.prop]
                         ? this.$scopedSlots?.['cell-' + col.prop]({
                             ...row,
@@ -107,6 +135,7 @@ export default defineComponent({
           ]
         ),
 
+        /* TABLE FOOTER */
         this.hasFooter
           ? h(
               'tfoot',
@@ -125,7 +154,7 @@ export default defineComponent({
                             class: this.classFooterCell,
                           },
                         },
-                        [this.$slots['footer-' + col.prop] || col.header]
+                        [tableHeaderSlotBlock(col, 'footer-')]
                       )
                     )
                   : Object.keys(this.data[0]).map((footer, index) =>
@@ -148,23 +177,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style lang="scss">
-.my-table-simple {
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-
-  td,
-  th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-
-  tr:nth-child(even) {
-    background-color: #f0f0f0;
-  }
-}
-</style>

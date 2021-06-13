@@ -13,10 +13,12 @@
 <script>
 // src\core\components\plugins\MyTippy\src\index.vue
 import { defineComponent } from '@vue/composition-api'
-import tippy from 'tippy.js'
+import tippy, { animateFill } from 'tippy.js'
 import 'tippy.js/dist/tippy.css'
+import 'tippy.js/dist/backdrop.css'
 import 'tippy.js/themes/light.css'
 import 'tippy.js/animations/scale.css'
+import 'tippy.js/animations/shift-away.css'
 
 export default defineComponent({
   name: 'MyTippy',
@@ -91,6 +93,7 @@ export default defineComponent({
     initiateTippy() {
       this.instance = tippy(this.$refs.handler.childNodes[0], {
         ...this.options,
+        plugins: [animateFill],
         allowHTML: true,
         content: this.container,
         placement: this.placement,
@@ -100,7 +103,8 @@ export default defineComponent({
         animation: 'scale',
         // See docs: https://atomiks.github.io/tippyjs/v6/all-props/#interactive
         interactive: true,
-        interactiveBorder: 10,
+        hideOnClick: false,
+        interactiveBorder: 15,
         onHide: this.onHide,
         onMount: this.onMount,
         onDestroy: this.onDestroy,
