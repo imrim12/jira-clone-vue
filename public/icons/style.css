@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?5uu32h');
+  src:  url('fonts/icomoon.eot?5uu32h#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?5uu32h') format('truetype'),
+    url('fonts/icomoon.woff?5uu32h') format('woff'),
+    url('fonts/icomoon.svg?5uu32h#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-attachment:before {
+  content: "\e919";
+}
+.icon-give-feedback:before {
+  content: "\e91a";
+}
+.icon-like:before {
+  content: "\e91b";
+}
+.icon-link-issues:before {
+  content: "\e91c";
+}
+.icon-share:before {
+  content: "\e91d";
+}
+.icon-sort-down:before {
+  content: "\e91e";
+}
+.icon-sort-up:before {
+  content: "\e91f";
+}
+.icon-subtask:before {
+  content: "\e920";
+}
+.icon-add-item:before {
+  content: "\e900";
+}
+.icon-archive:before {
+  content: "\e901";
+}
+.icon-backlog:before {
+  content: "\e902";
+}
+.icon-bell:before {
+  content: "\e903";
+}
+.icon-board:before {
+  content: "\e904";
+}
+.icon-chevron-down:before {
+  content: "\e905";
+}
+.icon-code:before {
+  content: "\e906";
+}
+.icon-code-block:before {
+  content: "\e907";
+}
+.icon-comment:before {
+  content: "\e908";
+}
+.icon-default:before {
+  content: "\e909";
+}
+.icon-eclipse-h:before {
+  content: "\e90a";
+}
+.icon-edit:before {
+  content: "\e90b";
+}
+.icon-eye:before {
+  content: "\e90c";
+}
+.icon-left-paragraph:before {
+  content: "\e90d";
+}
+.icon-link:before {
+  content: "\e90e";
+}
+.icon-pages:before {
+  content: "\e90f";
+}
+.icon-plus:before {
+  content: "\e910";
+}
+.icon-question:before {
+  content: "\e911";
+}
+.icon-quote:before {
+  content: "\e912";
+}
+.icon-roadmap:before {
+  content: "\e913";
+}
+.icon-search:before {
+  content: "\e914";
+}
+.icon-settings:before {
+  content: "\e915";
+}
+.icon-star:before {
+  content: "\e916";
+}
+.icon-time:before {
+  content: "\e917";
+}
+.icon-user:before {
+  content: "\e918";
+}
+.icon-checkbox-checked:before {
+  content: "\ea52";
+}
+.icon-checkbox-unchecked:before {
+  content: "\ea53";
+}

@@ -5,8 +5,7 @@ import projects from '@/pages/projects/route'
 import projectDetail from '@/pages/projects/[slug]/route'
 import authPages from '@/pages/auth/route'
 import sandbox from '@/core/pages/sandbox/route'
-import error500 from '@/core/pages/error/500/route'
-import error404 from '@/core/pages/error/404/route'
+import error404 from '@/core/pages/404/route'
 // Middleware
 import { auth } from '@middleware/auth'
 
@@ -19,12 +18,11 @@ const routes = [
   authPages,
   // Core pages
   sandbox,
-  error500,
   error404,
 ]
 
 const router = new VueRouter({
-  // mode: 'history',
+  mode: 'history',
   base: process.env.BASE_URL,
   routes,
 })

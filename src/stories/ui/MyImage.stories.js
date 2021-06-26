@@ -1,4 +1,4 @@
-import { MyImage } from '@/core/components/theme/image'
+import { MyImage } from '@/core/components/base/image'
 
 const storyConfig = {
   title: 'UI Components/MyImage',

@@ -1,4 +1,4 @@
-import { MyAvatarGroup } from '@/core/components/theme/avatar-group'
+import { MyAvatarGroup } from '@/core/components/base/avatar-group'
 
 const storyConfig = {
   title: 'UI Components/MyAvatarGroup',

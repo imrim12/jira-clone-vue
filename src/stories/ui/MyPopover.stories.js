@@ -1,5 +1,5 @@
-import { MyPopover } from '@/core/components/theme/popover'
-import { MyButton } from '@/core/components/theme/button'
+import { MyPopover } from '@/core/components/base/popover'
+import { MyButton } from '@/core/components/base/button'
 
 const storyConfig = {
   title: 'UI Components/MyTippy/MyPopover',

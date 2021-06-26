@@ -16,6 +16,11 @@
       border: var(--border-width) solid var(--color-gray-100);
       transform: translateY(-5px);
     }
+    &.active {
+      background-color: var(--color-primary-700);
+      border: var(--border-width) solid var(--color-primary-700);
+      transform: translateY(-5px);
+    }
     &-title {
       padding: 0 5px;
       font-weight: 500;

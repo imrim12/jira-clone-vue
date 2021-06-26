@@ -1,13 +1,7 @@
 <template>
   <div class="sandboxPageComponent">
-    <my-table-simple :data="data" :columns="columns">
-      <template slot="header-id">
-        <span>ok</span>
-      </template>
-      <template v-slot:cell-id="{ id }">
-        <span>#{{ id }}</span>
-      </template>
-    </my-table-simple>
+    <MyIcon icon="code-block"></MyIcon>
+    <my-draggable-list :data="data"></my-draggable-list>
   </div>
 </template>
 <script>
@@ -22,36 +16,53 @@ export default {
   },
   data() {
     return {
-      count: 0,
-      isVisible: true,
-      hehe: '',
-      columns: [
-        {
-          header: '#',
-        },
-        {
-          header: 'ID',
-          prop: 'id',
-        },
-        {
-          header: 'Full name',
-          prop: 'name',
-        },
-        {
-          header: 'Address',
-          prop: 'address',
-        },
-      ],
+      hehe: null,
       data: [
         {
           id: 1,
-          name: 'ABC',
-          address: '123 ABCDEF',
+          title: 'To do',
+          children: [
+            {
+              id: 2,
+              title: 'sdfsdfsdf',
+            },
+            {
+              id: 3,
+              title: 'vcvcv',
+            },
+            {
+              id: 9,
+              title: 'sdfdsfcv',
+            },
+            {
+              id: 10,
+              title: 'dsf',
+            },
+          ],
         },
         {
-          id: 2,
-          name: 'DEF',
-          address: '456 DEFGHI',
+          id: 4,
+          title: 'In progress',
+          children: [
+            {
+              id: 5,
+              title: 'ghfghdsfsdfgfh',
+            },
+          ],
+        },
+        {
+          id: 6,
+          title: 'Done',
+          children: [
+            {
+              id: 7,
+              title: 'fghfghgfh',
+            },
+            {
+              id: 83,
+              title: 'nbnvbn',
+            },
+          ],
         },
       ],
     }

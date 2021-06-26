@@ -1,5 +1,5 @@
-import { MyDropdownButton } from '@/core/components/theme/dropdown-button'
-import { MyDropdownItem } from '@/core/components/theme/dropdown-item'
+import { MyDropdownButton } from '@/core/components/base/dropdown-button'
+import { MyDropdownItem } from '@/core/components/base/dropdown-item'
 import { types as typeList } from '../assets/typeList'
 
 const storyConfig = {

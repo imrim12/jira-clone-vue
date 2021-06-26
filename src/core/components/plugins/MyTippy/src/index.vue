@@ -103,7 +103,7 @@ export default defineComponent({
         animation: 'scale',
         // See docs: https://atomiks.github.io/tippyjs/v6/all-props/#interactive
         interactive: true,
-        hideOnClick: false,
+        // hideOnClick: false,
         interactiveBorder: 15,
         onHide: this.onHide,
         onMount: this.onMount,

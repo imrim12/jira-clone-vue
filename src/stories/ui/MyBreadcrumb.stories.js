@@ -1,4 +1,4 @@
-import { MyBreadcrumb } from '@/core/components/theme/breadcrumb'
+import { MyBreadcrumb } from '@/core/components/base/breadcrumb'
 
 const storyConfig = {
   title: 'UI Components/MyBreadcrumb',

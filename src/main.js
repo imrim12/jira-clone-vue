@@ -28,7 +28,7 @@ import { utils } from '@utils'
 import App from '@/App.vue'
 import dev from './core/utils/functions/dev'
 
-import MyThemeComponents from '@theme'
+import '@/core/components/base'
 
 Vue.mixin(globalMixin)
 
@@ -36,20 +36,22 @@ Vue.use(clientApi)
 Vue.use(authApi)
 Vue.use(eventBus)
 Vue.use(utils)
-Vue.use(MyThemeComponents)
 
 Vue.config.errorHandler = (err, vm, info) => {
+  vm.$root.error = {
+    statusCode: err.statusCode || 500,
+    message: err.message || 'Something is wrong',
+  }
+  vm.$route.meta.layout = 'error'
+  // Force router reload
+  // Add a random temporary query parameter.
+  router.replace({ query: { temp: Date.now() } })
+  // Remove the temporary query parameter.
+  router.replace({ query: { temp: undefined } })
   // handle error
   // `info` is a Vue-specific error info, e.g. which lifecycle hook
   // the error was found in. Only available in 2.2.0+
   dev.error(err, vm, info)
-  router.push({
-    path: '/error',
-    query: {
-      statusCode: err.statusCode || 500,
-      message: err.message || 'Something is wrong',
-    },
-  })
 }
 
 Vue.config.warnHandler = (msg, vm, trace) => {

@@ -1,4 +1,4 @@
-import { MyButton } from '@/core/components/theme/button'
+import { MyButton } from '@/core/components/base/button'
 import { types as typeList } from '../assets/typeList'
 
 const storyConfig = {

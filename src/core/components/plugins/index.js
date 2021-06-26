@@ -1,3 +1,4 @@
 import { MyTippy } from './MyTippy'
+import { MyDraggable } from './MyDraggable'
 
-export { MyTippy }
+export { MyTippy, MyDraggable }

@@ -1,5 +1,5 @@
-import { MyDropdown } from '@/core/components/theme/dropdown'
-import { MyDropdownItem } from '@/core/components/theme/dropdown-item'
+import { MyDropdown } from '@/core/components/base/dropdown'
+import { MyDropdownItem } from '@/core/components/base/dropdown-item'
 
 const storyConfig = {
   title: 'UI Components/MyTippy/MyDropdown',

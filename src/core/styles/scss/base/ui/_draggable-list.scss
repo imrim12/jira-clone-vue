@@ -1,0 +1,53 @@
+.my-draggable-list {
+  &-header {
+    display: flex;
+    gap: 12px;
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(244, 245, 247);
+      width: 270px;
+      height: 48px;
+      justify-content: center;
+      border-radius: 6px 6px 0 0;
+      padding-left: 16px;
+
+      font-style: inherit;
+      text-transform: uppercase;
+      color: rgb(94, 108, 132);
+      letter-spacing: normal;
+      line-height: 1.14286;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+  &-body {
+    display: flex;
+    gap: 12px;
+  }
+  &-column {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(244, 245, 247);
+    width: 270px;
+    min-height: 100px;
+    align-items: center;
+    border-radius: 0 0 6px 6px;
+    padding: 6px 0;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    padding: 12px;
+    margin: 2px 0px;
+    border-radius: 3px;
+    font-size: 14px;
+    color: rgb(23, 43, 77);
+    background-color: white;
+    cursor: pointer;
+    user-select: none;
+    box-sizing: border-box;
+    @apply shadow;
+  }
+}

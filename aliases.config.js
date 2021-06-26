@@ -14,7 +14,7 @@ const aliases = {
   '@use': 'src/use',
   // Core access
   '@apis': 'src/core/apis',
-  '@theme': 'src/core/components/theme',
+  '@base': 'src/core/components/base',
   '@constants': 'src/core/constants',
   '@layouts': 'src/core/layouts',
   '@middleware': 'src/core/middleware',

@@ -1,4 +1,4 @@
-import { MyIcon } from '@/core/components/theme/icon'
+import { MyIcon } from '@/core/components/base/icon'
 import { icons } from '../assets/iconList.js'
 
 const storyConfig = {

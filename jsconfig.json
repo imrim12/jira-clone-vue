@@ -72,13 +72,13 @@
         "src/core/apis/index.scss",
         "src/core/apis/index.css"
       ],
-      "@theme/*": ["src/core/components/theme/*"],
-      "@theme": [
-        "src/core/components/theme/index.js",
-        "src/core/components/theme/index.json",
-        "src/core/components/theme/index.vue",
-        "src/core/components/theme/index.scss",
-        "src/core/components/theme/index.css"
+      "@base/*": ["src/core/components/base/*"],
+      "@base": [
+        "src/core/components/base/index.js",
+        "src/core/components/base/index.json",
+        "src/core/components/base/index.vue",
+        "src/core/components/base/index.scss",
+        "src/core/components/base/index.css"
       ],
       "@constants/*": ["src/core/constants/*"],
       "@constants": [

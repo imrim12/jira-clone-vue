@@ -1,4 +1,4 @@
-import { MyAvatar } from '@/core/components/theme/avatar'
+import { MyAvatar } from '@/core/components/base/avatar'
 
 const storyConfig = {
   title: 'UI Components/MyAvatar',

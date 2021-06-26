@@ -1,4 +1,4 @@
-import { MyInput } from '@/core/components/theme/input'
+import { MyInput } from '@/core/components/base/input'
 import { email } from '@/core/constants/validation/regex'
 
 const storyConfig = {

@@ -1,5 +1,5 @@
-import { MyButtonIcon } from '@/core/components/theme/button-icon'
-import { MyIcon } from '@/core/components/theme/icon'
+import { MyButtonIcon } from '@/core/components/base/button-icon'
+import { MyIcon } from '@/core/components/base/icon'
 import { icons } from '../assets/iconList.js'
 import { types as typeList } from '../assets/typeList'
 

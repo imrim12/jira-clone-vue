@@ -1,4 +1,4 @@
-import { MyTableSimple } from '@/core/components/theme/table-simple'
+import { MyTableSimple } from '@/core/components/base/table-simple'
 
 const storyConfig = {
   title: 'UI Components/MyTableSimple',

@@ -1,5 +1,5 @@
-import { MyModal } from '@/core/components/theme/modal'
-import { MyButton } from '@/core/components/theme/button'
+import { MyModal } from '@/core/components/base/modal'
+import { MyButton } from '@/core/components/base/button'
 
 const storyConfig = {
   title: 'UI Components/MyModal',

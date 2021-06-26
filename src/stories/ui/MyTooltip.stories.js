@@ -1,5 +1,5 @@
-import { MyTooltip } from '@/core/components/theme/tooltip'
-import { MyButton } from '@/core/components/theme/button'
+import { MyTooltip } from '@/core/components/base/tooltip'
+import { MyButton } from '@/core/components/base/button'
 
 const storyConfig = {
   title: 'UI Components/MyTippy/MyTooltip',

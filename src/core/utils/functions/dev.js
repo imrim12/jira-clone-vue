@@ -5,7 +5,7 @@ export default {
    */
   error: (...args) => {
     if (process.env.NODE_ENV !== 'production') {
-      console.error(...args)
+      console.error('[Dev only]', ...args)
     } else {
       console.error('Something is wrong')
     }
@@ -16,9 +16,7 @@ export default {
    */
   log: (...args) => {
     if (process.env.NODE_ENV !== 'production') {
-      console.log(...args)
-    } else {
-      console.log('Something is wrong')
+      console.log('[Dev only]', ...args)
     }
   },
   /**
@@ -27,9 +25,7 @@ export default {
    */
   warn: (...args) => {
     if (process.env.NODE_ENV !== 'production') {
-      console.warn(...args)
-    } else {
-      console.warn('Something is wrong')
+      console.warn('[Dev only]', ...args)
     }
   },
 }
