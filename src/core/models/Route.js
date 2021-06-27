@@ -1,31 +1,5 @@
 export class Route {
   required = ['name', 'path', 'component']
-  /**
-   * If the options property is not specify, route won't be displayed in
-   * sidebar
-   *
-   * @param {{
-   *  name: string,
-   *  path: string,
-   *  redirect?: string,
-   *  alias?: string[],
-   *  component: any,
-   *  meta: {
-   *    authNotRequired?: boolean,
-   *    auth?: boolean,
-   *    permissions?: string[]
-   *  },
-   *  options?: {
-   *    label: string,
-   *    icon: {
-   *      type: string,
-   *      class: string,
-   *    }
-   * }
-   *  children?: Route[]
-   * }} options
-   * @returns
-   */
   constructor(options) {
     this.name = options.name
     this.path = options.path
