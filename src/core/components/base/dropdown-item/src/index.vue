@@ -9,7 +9,7 @@ export default defineComponent({
     return h(
       'div',
       {
-        class: { 'my-dropdown-item': true },
+        class: ['my-dropdown-item'],
       },
       slots().default
     )

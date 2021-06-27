@@ -19,11 +19,17 @@ import 'tippy.js/dist/backdrop.css'
 import 'tippy.js/themes/light.css'
 import 'tippy.js/animations/scale.css'
 import 'tippy.js/animations/shift-away.css'
+import 'tippy.js/animations/perspective.css'
+import 'tippy.js/animations/shift-toward.css'
 
 export default defineComponent({
   name: 'MyTippy',
   emits: ['hide', 'mount', 'destroy'],
   props: {
+    animation: {
+      type: String,
+      default: 'perspective',
+    },
     // See all props in tippy.js docs: https://atomiks.github.io/tippyjs/v6/all-props
     options: {
       type: Object,
@@ -49,7 +55,7 @@ export default defineComponent({
     },
     offsetY: {
       type: Number,
-      default: 10,
+      default: 20,
     },
     title: String,
   },
@@ -94,17 +100,18 @@ export default defineComponent({
       this.instance = tippy(this.$refs.handler.childNodes[0], {
         ...this.options,
         plugins: [animateFill],
+        // hideOnClick: false,
+        interactiveBorder: 15,
+        arrow: false,
         allowHTML: true,
         content: this.container,
         placement: this.placement,
         theme: this.theme,
         trigger: this.trigger,
         offset: [this.offsetX, this.offsetY],
-        animation: 'scale',
+        animation: this.animation,
         // See docs: https://atomiks.github.io/tippyjs/v6/all-props/#interactive
         interactive: true,
-        // hideOnClick: false,
-        interactiveBorder: 15,
         onHide: this.onHide,
         onMount: this.onMount,
         onDestroy: this.onDestroy,

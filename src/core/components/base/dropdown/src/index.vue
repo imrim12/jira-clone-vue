@@ -13,17 +13,16 @@
 import { MyTippy } from '@/core/components/plugins'
 
 export default {
-  ...MyTippy,
+  extends: MyTippy,
   name: 'MyDropdown',
   props: {
-    ...MyTippy.props,
     placement: {
       type: String,
       default: 'bottom',
     },
     trigger: {
       type: String,
-      default: 'click',
+      default: 'mouseover',
     },
   },
 }

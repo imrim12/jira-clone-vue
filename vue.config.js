@@ -21,5 +21,15 @@ module.exports = {
   css: {
     // Enable CSS source maps.
     sourceMap: true,
+    // See docs: https://cli.vuejs.org/guide/css.html#css-modules
+    // requireModuleExtension: false,
+    loaderOptions: {
+      sass: {
+        prependData: `
+          @import "@/core/styles/scss/global/all.scss";
+        `,
+      },
+      css: {},
+    },
   },
 }

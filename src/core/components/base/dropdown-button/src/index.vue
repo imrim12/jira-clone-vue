@@ -1,27 +1,28 @@
 <template>
   <div class="my-dropdown-button-wrapper">
     <button
+      @click="$emit('click', $event)"
+      v-wave
       class="my-dropdown-button"
       :class="[
         type ? `my-dropdown-button--${type}` : '',
         size ? `my-dropdown-button--${size}` : '',
       ]"
-      v-wave
     >
       <slot />
     </button>
     <button
+      v-wave
       ref="handler"
       class="my-dropdown-button my-dropdown-button--square my-dropdown-button-target"
       :class="[
         type ? `my-dropdown-button--${type}` : '',
         size ? `my-dropdown-button--${size}` : '',
       ]"
-      v-wave
     >
       <MyIcon icon="chevron-down" />
     </button>
-    <div class="my-dropdown-inner" ref="container">
+    <div class="my-dropdown-button-inner" ref="container">
       <slot name="body"></slot>
     </div>
   </div>
@@ -32,20 +33,19 @@ import { MyTippy } from '@/core/components/plugins'
 import { MyIcon } from '../../icon'
 
 export default {
-  ...MyTippy,
+  extends: MyTippy,
   components: {
     MyIcon,
   },
   name: 'MyDropdownButton',
   props: {
-    ...MyTippy.props,
     placement: {
       type: String,
       default: 'bottom',
     },
     trigger: {
       type: String,
-      default: 'click',
+      default: 'mouseover',
     },
     // Button props
     type: {
