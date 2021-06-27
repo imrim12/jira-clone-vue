@@ -6,7 +6,9 @@
         :key="`draggable-header-column-${index}`"
         class="my-draggable-list-header-inner"
       >
-        {{ column.title }}
+        <slot name="header" :column="column">
+          {{ column.title }}
+        </slot>
       </div>
     </div>
     <div class="my-draggable-list-body">
@@ -18,21 +20,16 @@
           v-bind="dragOptions"
           v-model="data[index].children"
           @change="$emit('change', data)"
-          @start="drag = true"
-          @end="drag = false"
           class="my-draggable-list-column"
           group="tasks"
         >
-          <transition-group
-            type="transition"
-            :name="!drag ? 'flip-list' : null"
+          <MyDraggableListItem
+            v-for="item in column.children"
+            :key="`draggable-item-${item.id}`"
+            :title="item.title"
           >
-            <MyDraggableListItem
-              v-for="item in column.children"
-              :key="`draggable-item-${item.id}`"
-              :title="item.title"
-            />
-          </transition-group>
+            <slot :item="item"></slot>
+          </MyDraggableListItem>
         </MyDraggable>
       </div>
     </div>
@@ -65,11 +62,6 @@ export default defineComponent({
         return true
       },
     },
-  },
-  data() {
-    return {
-      drag: false,
-    }
   },
   computed: {
     dragOptions() {
