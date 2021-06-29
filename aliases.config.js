@@ -5,6 +5,7 @@ const fs = require('fs')
 const prettier = require('prettier')
 
 const aliases = {
+  '@@': '',
   '@': 'src',
   '@assets': 'src/assets',
   '@locales': 'src/locales',
