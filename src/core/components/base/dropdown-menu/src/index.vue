@@ -1,9 +1,9 @@
 <script>
 import { defineComponent } from '@vue/composition-api'
-import { Tooltip } from 'element-ui'
+import { DropdownMenu } from 'element-ui'
 
 export default defineComponent({
-  name: 'MyTooltip',
-  extends: Tooltip,
+  name: 'MyDropdownMenu',
+  extends: DropdownMenu,
 })
 </script>

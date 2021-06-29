@@ -3,15 +3,15 @@ import {
   Pagination,
   Dialog,
   Autocomplete,
-  Dropdown,
-  DropdownMenu,
-  DropdownItem,
+  // Dropdown,
+  // DropdownMenu,
+  // DropdownItem,
   Menu,
   Submenu,
   MenuItem,
   MenuItemGroup,
-  Input,
-  InputNumber,
+  // Input,
+  // InputNumber,
   Radio,
   RadioGroup,
   RadioButton,
@@ -22,19 +22,19 @@ import {
   Select,
   Option,
   OptionGroup,
-  Button,
-  ButtonGroup,
+  // Button,
+  // ButtonGroup,
   Table,
   TableColumn,
   DatePicker,
   TimeSelect,
   TimePicker,
-  Popover,
-  Tooltip,
-  Breadcrumb,
-  BreadcrumbItem,
-  Form,
-  FormItem,
+  // Popover,
+  // Tooltip,
+  // Breadcrumb,
+  // BreadcrumbItem,
+  // Form,
+  // FormItem,
   Tabs,
   TabPane,
   Tag,
@@ -59,11 +59,11 @@ import {
   Cascader,
   ColorPicker,
   Transfer,
-  Container,
-  Header,
-  Aside,
-  Main,
-  Footer,
+  // Container,
+  // Header,
+  // Aside,
+  // Main,
+  // Footer,
   Timeline,
   TimelineItem,
   Link,
@@ -82,15 +82,15 @@ import {
 Vue.use(Pagination)
 Vue.use(Dialog)
 Vue.use(Autocomplete)
-Vue.use(Dropdown)
-Vue.use(DropdownMenu)
-Vue.use(DropdownItem)
+// Vue.use(Dropdown)
+// Vue.use(DropdownMenu)
+// Vue.use(DropdownItem)
 Vue.use(Menu)
 Vue.use(Submenu)
 Vue.use(MenuItem)
 Vue.use(MenuItemGroup)
-Vue.use(Input)
-Vue.use(InputNumber)
+// Vue.use(Input)
+// Vue.use(InputNumber)
 Vue.use(Radio)
 Vue.use(RadioGroup)
 Vue.use(RadioButton)
@@ -101,19 +101,19 @@ Vue.use(Switch)
 Vue.use(Select)
 Vue.use(Option)
 Vue.use(OptionGroup)
-Vue.use(Button)
-Vue.use(ButtonGroup)
+// Vue.use(Button)
+// Vue.use(ButtonGroup)
 Vue.use(Table)
 Vue.use(TableColumn)
 Vue.use(DatePicker)
 Vue.use(TimeSelect)
 Vue.use(TimePicker)
-Vue.use(Popover)
-Vue.use(Tooltip)
-Vue.use(Breadcrumb)
-Vue.use(BreadcrumbItem)
-Vue.use(Form)
-Vue.use(FormItem)
+// Vue.use(Popover)
+// Vue.use(Tooltip)
+// Vue.use(Breadcrumb)
+// Vue.use(BreadcrumbItem)
+// Vue.use(Form)
+// Vue.use(FormItem)
 Vue.use(Tabs)
 Vue.use(TabPane)
 Vue.use(Tag)
@@ -138,11 +138,11 @@ Vue.use(CollapseItem)
 Vue.use(Cascader)
 Vue.use(ColorPicker)
 Vue.use(Transfer)
-Vue.use(Container)
-Vue.use(Header)
-Vue.use(Aside)
-Vue.use(Main)
-Vue.use(Footer)
+// Vue.use(Container)
+// Vue.use(Header)
+// Vue.use(Aside)
+// Vue.use(Main)
+// Vue.use(Footer)
 Vue.use(Timeline)
 Vue.use(TimelineItem)
 Vue.use(Link)

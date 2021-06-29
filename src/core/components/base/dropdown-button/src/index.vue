@@ -3,46 +3,43 @@
     <button
       class="my-dropdown-button"
       :class="[
-        type ? `my-dropdown-button--${type}` : '',
-        size ? `my-dropdown-button--${size}` : '',
+        type && `my-dropdown-button--${type}`,
+        size && `my-dropdown-button--${size}`,
       ]"
       v-wave
     >
-      <slot />
+      <slot name="title">
+        {{ title }}
+      </slot>
     </button>
-    <button
-      ref="handler"
-      class="my-dropdown-button my-dropdown-button--square my-dropdown-button-target"
-      :class="[
-        type ? `my-dropdown-button--${type}` : '',
-        size ? `my-dropdown-button--${size}` : '',
-      ]"
-      v-wave
-    >
-      <MyIcon icon="chevron-down" />
-    </button>
-    <div class="my-dropdown-inner" ref="container">
-      <slot name="body"></slot>
-    </div>
+    <MyDropdown v-bind="$props">
+      <button
+        class="my-dropdown-button my-dropdown-button--square my-dropdown-button-target"
+        :class="[
+          type && `my-dropdown-button--${type}`,
+          size && `my-dropdown-button--${size}`,
+        ]"
+        v-wave
+      >
+        <MyIcon icon="chevron-down" />
+      </button>
+      <MyDropdownMenu slot="dropdown">
+        <div class="my-dropdown-inner">
+          <slot></slot>
+        </div>
+      </MyDropdownMenu>
+    </MyDropdown>
   </div>
 </template>
 <script>
-// src\core\components\theme\dropdown-button\src\index.vue
-import { MyTippy } from '@/core/components/plugins'
-import { MyIcon } from '../../icon'
+import { defineComponent } from '@vue/composition-api'
+import { Dropdown } from 'element-ui'
 
-export default {
-  ...MyTippy,
-  components: {
-    MyIcon,
-  },
+export default defineComponent({
   name: 'MyDropdownButton',
+  extends: Dropdown,
   props: {
-    ...MyTippy.props,
-    placement: {
-      type: String,
-      default: 'bottom',
-    },
+    title: String,
     trigger: {
       type: String,
       default: 'click',
@@ -59,5 +56,5 @@ export default {
       },
     },
   },
-}
+})
 </script>

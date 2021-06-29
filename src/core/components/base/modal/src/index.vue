@@ -95,27 +95,19 @@ export default defineComponent({
       return !!this.$slots.footer
     },
   },
-  created() {
-    this.$root.$on('my-modal-show', (id) => {
-      if (id === this.id) {
-        this.$emit('change', true)
-        this.$nextTick(() => {
-          this.$emit('my-modal-on')
-        })
-      }
-    })
-    this.$root.$on('my-modal-hide', (id) => {
-      if (id === this.id) {
-        this.$emit('change', false)
-        this.$nextTick(() => {
-          this.$emit('my-modal-off')
-        })
-      }
-    })
-  },
-  beforeDestroy() {
-    this.$root.$on('my-modal-show')
-    this.$root.$on('my-modal-hide')
+  methods: {
+    hide() {
+      this.$emit('change', false)
+      this.$nextTick(() => {
+        this.$emit('my-modal-off')
+      })
+    },
+    show() {
+      this.$emit('change', true)
+      this.$nextTick(() => {
+        this.$emit('my-modal-on')
+      })
+    },
   },
 })
 </script>

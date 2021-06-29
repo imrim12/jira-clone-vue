@@ -1,30 +1,9 @@
-<template>
-  <span class="my-dropdown-wrapper">
-    <span class="my-dropdown-target" ref="handler">
-      <slot />
-    </span>
-    <div class="my-dropdown-inner" ref="container">
-      <slot name="body"></slot>
-    </div>
-  </span>
-</template>
 <script>
-// src\core\components\theme\dropdown\src\index.vue
-import { MyTippy } from '@/core/components/plugins'
+import { defineComponent } from '@vue/composition-api'
+import { Dropdown } from 'element-ui'
 
-export default {
-  ...MyTippy,
+export default defineComponent({
   name: 'MyDropdown',
-  props: {
-    ...MyTippy.props,
-    placement: {
-      type: String,
-      default: 'bottom',
-    },
-    trigger: {
-      type: String,
-      default: 'click',
-    },
-  },
-}
+  extends: Dropdown,
+})
 </script>
