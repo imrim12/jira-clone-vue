@@ -8,6 +8,14 @@
     "target": "esnext",
     "module": "es2015",
     "paths": {
+      "@@/*": ["/*"],
+      "@@": [
+        "/index.js",
+        "/index.json",
+        "/index.vue",
+        "/index.scss",
+        "/index.css"
+      ],
       "@/*": ["src/*"],
       "@": [
         "src/index.js",

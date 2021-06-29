@@ -25,7 +25,7 @@ export const tryAllOptions = (args, { argTypes }) => ({
   template: `
     <div class="text-center">
       <div v-for="icon in icons" class="inline-block text-gray mx-2 my-2" :title="icon">
-        <my-icon v-bind="$props" v-bind:icon="icon" />
+        <my-icon v-bind:icon="icon" />
       </div>
     </div>
   `,

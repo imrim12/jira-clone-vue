@@ -12,6 +12,7 @@ Vue.config.productionTip = false
 
 import '@/core/styles/css/main.css'
 import '@/core/styles/scss/main.scss'
+import '@@/public/icons/style.css'
 
 // Plugins
 import router from './router'

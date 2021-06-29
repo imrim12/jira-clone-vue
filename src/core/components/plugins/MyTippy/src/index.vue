@@ -94,6 +94,7 @@ export default defineComponent({
       this.instance = tippy(this.$refs.handler.childNodes[0], {
         ...this.options,
         plugins: [animateFill],
+        maxWidth: 'none',
         allowHTML: true,
         content: this.container,
         placement: this.placement,
