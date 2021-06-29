@@ -1,5 +1,7 @@
 <template>
-  <div class="sandboxPageComponent"></div>
+  <div class="sandboxPageComponent">
+    <el-button>OK</el-button>
+  </div>
 </template>
 <script>
 export default {

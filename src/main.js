@@ -26,10 +26,12 @@ import authApi from '@/core/apis/auth'
 import { globalMixin } from '@mixins/global'
 //
 import { utils } from '@utils'
+import dev from '@/core/utils/functions/dev'
+
 import App from '@/App.vue'
-import dev from './core/utils/functions/dev'
 
 import '@/core/components/base'
+import '@/core/plugins/element-ui'
 
 Vue.mixin(globalMixin)
 
