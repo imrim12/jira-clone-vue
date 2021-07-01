@@ -47,7 +47,7 @@ export default defineComponent({
     // Button props
     type: {
       validator(value) {
-        return ['primary', 'light'].includes(value)
+        return ['primary', 'light', 'danger', 'success', 'info', 'warning', 'gray', 'dark'].includes(value)
       },
     },
     size: {

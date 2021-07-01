@@ -77,6 +77,17 @@
     }
   }
 
+  &--dark {
+    background-color: $--color-dark;
+    color: $--color-white;
+    &:hover {
+      background-color: $--color-dark-600;
+    }
+    &:active {
+      background-color: $--color-dark-700;
+    }
+  }
+
 
   &--white {
     background-color: $--color-white;

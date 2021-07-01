@@ -3,10 +3,10 @@
     v-on="listeners"
     class="my-button my-button-icon"
     :class="[
-      props.type ? `my-button--${props.type}` : '',
-      props.size ? `my-button--${props.size}` : '',
-      props.square ? 'my-button--square' : '',
-      props.round ? 'my-button--square rounded-full' : '',
+      props.type && `my-button--${props.type}`,
+      props.size && `my-button--${props.size}`,
+      props.square && 'my-button--square',
+      props.round && 'my-button--square rounded-full',
     ]"
     v-wave
   >
@@ -38,7 +38,16 @@ export default defineComponent({
   props: {
     type: {
       validator(value) {
-        return ['primary', 'light'].includes(value)
+        return [
+          'primary',
+          'light',
+          'danger',
+          'success',
+          'info',
+          'warning',
+          'gray',
+          'dark',
+        ].includes(value)
       },
     },
     size: {

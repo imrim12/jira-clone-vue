@@ -98,3 +98,13 @@ $--color-gray-600: mix($--color-black, $--color-gray, 20%) !default;
 $--color-gray-700: mix($--color-black, $--color-gray, 40%) !default;
 $--color-gray-800: mix($--color-black, $--color-gray, 50%) !default;
 $--color-gray-900: mix($--color-black, $--color-gray, 90%) !default;
+
+$--color-dark-100: mix($--color-white, $--color-dark, 90%) !default;
+$--color-dark-200: mix($--color-white, $--color-dark, 60%) !default;
+$--color-dark-300: mix($--color-white, $--color-dark, 40%) !default;
+$--color-dark-400: mix($--color-white, $--color-dark, 20%) !default;
+$--color-dark-500:                     $--color-dark       !default;
+$--color-dark-600: mix($--color-black, $--color-dark, 20%) !default;
+$--color-dark-700: mix($--color-black, $--color-dark, 40%) !default;
+$--color-dark-800: mix($--color-black, $--color-dark, 50%) !default;
+$--color-dark-900: mix($--color-black, $--color-dark, 90%) !default;

@@ -20,7 +20,7 @@ export default defineComponent({
   components: {
     MyNavbarAppList: () => import('./MyNavbarAppList.vue'),
     MyNavbarLogo: () => import('./MyNavbarLogo.vue'),
-    MyNavbarMenu: () => import('./MyNavbarMenu.vue'),
+    MyNavbarMenu: () => import('./MyNavbarMenu/index.vue'),
     MyNavbarSearchBox: () => import('./MyNavbarSearchBox.vue'),
     MyNavbarUtilities: () => import('./MyNavbarUtilities.vue'),
   },
